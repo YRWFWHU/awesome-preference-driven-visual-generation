@@ -1,0 +1,50 @@
+name: Add or correct a resource
+description: Propose a verified resource or correct evidence and metadata.
+title: '[Resource] '
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Full title and primary source
+      description: Link the paper, official proceedings, or resource provider.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Proposed scope
+      options:
+        - Core method
+        - Core supporting resource
+        - Related but distinct
+        - Unclear — needs discussion
+    validations:
+      required: true
+  - type: textarea
+    id: individual
+    attributes:
+      label: Individual-user signal and inclusion reason
+      description: Who is the user, what feedback/history is used, and how does it affect generation? If prediction-only, say so. Explain any style/identity/population-level boundary.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Metadata and publication-status evidence
+      description: Ordered authors, first public date with supported precision, venue/year/status, arXiv/DOI and official acceptance/proceedings source. A submission page alone is not acceptance.
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Official code, data, model or project links
+      description: Explain their link from the author or paper, and whether they are complete, partial, inaccessible, or not found as of a stated date. Label unofficial implementations.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, limitations and verification date
+      description: Cite paper sections for user/prompt splits, actual evaluation participants or proxies and base models. Distinguish user-specific prediction from generation and real users from agents. Record conflicts and the date you read each source.
+    validations:
+      required: true

@@ -1,0 +1,3583 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "id": "tailored-visions",
+      "title": "Tailored Visions: Enhancing Text-to-Image Generation with Personalized Prompt Rewriting",
+      "short_name": "Tailored Visions",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "summary": "Rewrites a prompt using the individual’s earlier prompts and image-generation history.",
+      "inclusion_reason": "History is evidence about a particular user, rather than a single subject to reproduce.",
+      "primary_url": "https://arxiv.org/abs/2310.08129",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2310.08129",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2310.08129",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_Tailored_Visions_Enhancing_Text-to-Image_Generation_with_Personalized_Prompt_Rewriting_CVPR_2024_paper.pdf",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official CVPR paper, title page and Sections 3–5."
+        },
+        {
+          "url": "https://github.com/zzjchen/Tailored-Visions",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Linked in the paper; repository includes rewriting scripts and PIP download instructions."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Chen, Zijie",
+        "Zhang, Lichao",
+        "Weng, Fangsheng",
+        "Pan, Lili",
+        "Lan, Zhenzhong"
+      ],
+      "first_publication_date": "2023-10-12",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2024,
+      "venue": "CVPR 2024",
+      "publication_status": "published",
+      "arxiv_id": "2310.08129",
+      "doi": null,
+      "official_code_url": "https://github.com/zzjchen/Tailored-Visions",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Linked in the paper; repository includes rewriting scripts and PIP download instructions.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "prompt_rewriting",
+        "retrieval_in_context"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "similarity_proxy",
+        "target_user_study"
+      ],
+      "base_models": [
+        "Stable Diffusion v1.5"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3–5: PIP histories drive retrieval and rewriting; offline alignment metrics are separate from a single-blind online study of active users.",
+      "limitations": "Saved images and reconstructed prompts can entangle content with taste. Offline image similarity is not direct preference evidence.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "PIP (Tailored Visions)",
+        "user_identity": "User identifiers in histories",
+        "feedback": "Historical prompts and saved generations, not explicit dislike labels",
+        "size_note": "3,115 users; 300,237 text-to-image history records (Section 3)",
+        "evaluation_note": "Offline proxy evaluation plus an online target-user study; PIP and PIPBench are different datasets.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "tailoredvisions",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "pages": null,
+        "source_url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_Tailored_Visions_Enhancing_Text-to-Image_Generation_with_Personalized_Prompt_Rewriting_CVPR_2024_paper.pdf"
+      },
+      "reading_order": 1,
+      "reading_reason": "See how implicit generation history becomes prompt rewriting, and why a history is not a dislike label."
+    },
+    {
+      "id": "ppd",
+      "title": "Personalized Preference Fine-tuning of Diffusion Models",
+      "short_name": "PPD",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "summary": "Conditions diffusion preference tuning on representations inferred from a user’s comparison examples.",
+      "inclusion_reason": "The DPO objective is user-conditioned; generic use of DPO alone would not qualify.",
+      "primary_url": "https://arxiv.org/abs/2501.06655",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2501.06655",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2501.06655",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Dang_Personalized_Preference_Fine-tuning_of_Diffusion_Models_CVPR_2025_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official proceedings page and exported BibTeX checked directly; title/authors/year/pages matched."
+        },
+        {
+          "url": "https://github.com/Asap7772/Personalized-Text-To-Image-Diffusion",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Directly linked by Meihua Dang’s author homepage. Repository releases only Stage 1 VLM code; Stage 2 diffusion tuning is not open-sourced."
+        },
+        {
+          "url": "https://asap7772.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Author homepage lists this paper and links the Asap7772 GitHub account."
+        },
+        {
+          "url": "https://cs.stanford.edu/~mhdang/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Meihua Dang’s paper entry directly links the Asap7772/Personalized-Text-To-Image-Diffusion code repository."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Dang, Meihua",
+        "Singh, Anikait",
+        "Zhou, Linqi",
+        "Ermon, Stefano",
+        "Song, Jiaming"
+      ],
+      "first_publication_date": "2025-01-11",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2025,
+      "venue": "CVPR 2025",
+      "publication_status": "published",
+      "arxiv_id": "2501.06655",
+      "doi": null,
+      "official_code_url": "https://github.com/Asap7772/Personalized-Text-To-Image-Diffusion",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "partial",
+      "code_note": "Directly linked by Meihua Dang’s author homepage. Repository releases only Stage 1 VLM code; Stage 2 diffusion tuning is not open-sourced.",
+      "tasks": [
+        "generation",
+        "preference_prediction"
+      ],
+      "user_signals": [
+        "pairwise"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "llm_judge",
+        "generic_reward"
+      ],
+      "base_models": [
+        "Stable Cascade"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 4–5: a shared VLM extracts user embeddings; tests separate unseen users and held-out captions. Reported generation wins use VLM judges.",
+      "limitations": "Real-user Pick-a-Pic histories are used, but generation win rates are not target-user votes. Main text and appendix name GPT-4o and GPT-4o-mini; retain this protocol ambiguity.",
+      "conflicts": [
+        "The introduction/abstract reports 76% while Figure 6 in the checked arXiv version gives 81% aggregate under its described automatic comparison; these are not silently merged."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "ppd",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "pages": "8020--8030",
+        "source_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Dang_Personalized_Preference_Fine-tuning_of_Diffusion_Models_CVPR_2025_paper.html"
+      },
+      "reading_order": 3,
+      "reading_reason": "Study few-shot conditioning with distinct unseen-user and held-out-caption splits; inspect the model-judge protocol."
+    },
+    {
+      "id": "prefgen-relative-attributes",
+      "title": "PrefGen: Preference Guided Image Generation with Relative Attributes",
+      "short_name": "PrefGen (relative attributes, 2023)",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Elicits session-specific attribute preferences through comparisons for StyleGAN face editing and generation.",
+      "inclusion_reason": "Borderline but included: a session-specific preference is inferred from responses; this is not merely reproducing a supplied identity. It is not general T2I history personalization.",
+      "primary_url": "https://arxiv.org/abs/2304.00185",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2304.00185",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://github.com/helblazer811/PrefGen",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Explicitly linked in arXiv abstract; README documents StyleGAN2 and oracle examples."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Helbling, Alec",
+        "Rozell, Christopher J.",
+        "O'Shaughnessy, Matthew",
+        "Fallah, Kion"
+      ],
+      "first_publication_date": "2023-04-01",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2023,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2304.00185",
+      "doi": null,
+      "official_code_url": "https://github.com/helblazer811/PrefGen",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Explicitly linked in arXiv abstract; README documents StyleGAN2 and oracle examples.",
+      "tasks": [
+        "generation",
+        "editing"
+      ],
+      "user_signals": [
+        "pairwise"
+      ],
+      "methods": [
+        "active_elicitation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "synthetic",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "not_applicable",
+      "evaluates_new_prompts": "not_applicable",
+      "evaluation": [
+        "simulation"
+      ],
+      "base_models": [
+        "StyleGAN2"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Abstract and official repository describe active paired queries and attribute localization; repository examples explicitly query an oracle against a target.",
+      "limitations": "Evidence checked here is an attribute-localization setting with an oracle, not persistent aesthetic transfer or a verified real-user study.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "prefgenrelativeattributes",
+        "entry_type": "article",
+        "container": "arXiv preprint arXiv:2304.00185",
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2304.00185"
+      }
+    },
+    {
+      "id": "prefgen-multimodal",
+      "title": "PrefGen: Multimodal Preference Learning for Preference-Conditioned Image Generation",
+      "short_name": "PrefGen (multimodal, 2025)",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "summary": "Extracts liked/disliked visual preferences with an MLLM and conditions diffusion through aligned user representations.",
+      "inclusion_reason": "Inputs are user histories, with inter-user and within-user contrast; identity in the representation is a user component, not solely subject fidelity.",
+      "primary_url": "https://arxiv.org/abs/2512.06020",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2512.06020",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2512.06020",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://prefgen.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Linked from arXiv; code/model buttons read Coming Soon when checked."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Mo, Wenyi",
+        "Zhang, Tianyu",
+        "Bai, Yalong",
+        "Han, Ligong",
+        "Ba, Ying",
+        "Metaxas, Dimitris N."
+      ],
+      "first_publication_date": "2025-12-04",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2025,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2512.06020",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": "https://prefgen.github.io/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "announced",
+      "code_note": "Author project says Code (Coming Soon); public implementation not verified as of 2026-09-16",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "personalized_scorer",
+        "llm_judge",
+        "third_party_human",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 2–3 and Appendix C: SDXL is the trained generator; FLUX generates synthetic training images. Expert and Prolific judges assess histories; synthetic users are split by identity.",
+      "limitations": "Do not label FLUX as a verified PrefGen generator. Third-party judgments of an inferred preference do not establish that the history owner prefers the result.",
+      "conflicts": [
+        "A discovered ICLR 2026 submission PDF is not acceptance evidence. Only preprint status is verified here."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "prefgenmultimodal",
+        "entry_type": "article",
+        "container": "arXiv preprint arXiv:2512.06020",
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2512.06020"
+      }
+    },
+    {
+      "id": "premier",
+      "title": "Premier: Personalized Preference Modulation with Learnable User Embedding in Text-to-Image Generation",
+      "short_name": "Premier",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "summary": "Learns user embeddings and prompt-dependent adapters, then optimizes new users as combinations of learned embeddings.",
+      "inclusion_reason": "A fixed user vector is combined with prompt tokens; user representation does not imply prompt-independent preference effects.",
+      "primary_url": "https://arxiv.org/abs/2603.20725",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2603.20725",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2603.20725",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Premier_Personalized_Preference_Modulation_with_Learnable_User_Embedding_in_Text-to-Image_CVPR_2026_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official proceedings page and exported BibTeX checked directly; title/authors/year/pages matched."
+        },
+        {
+          "url": "https://github.com/120L020904/Premier",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Paper-linked repository includes training and inference; per-user adaptation is an optimization stage."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Wang, Zihao",
+        "Wei, Yuxiang",
+        "Zhou, Xinpeng",
+        "Zhang, Tianyu",
+        "Liang, Tao",
+        "Bai, Yalong",
+        "Zhang, Hongzhi",
+        "Zuo, Wangmeng"
+      ],
+      "first_publication_date": "2026-03-21",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2026,
+      "venue": "CVPR 2026",
+      "publication_status": "published",
+      "arxiv_id": "2603.20725",
+      "doi": null,
+      "official_code_url": "https://github.com/120L020904/Premier",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Paper-linked repository includes training and inference; per-user adaptation is an optimization stage.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "personalized_scorer",
+        "third_party_human",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "FLUX.1-dev"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 4.3 and 5: new-user mixture coefficients are optimized; 50 test users are outside the 1,000 training users. Figure 4 uses experts judging histories.",
+      "limitations": "Expert judgments are not votes from the target users. Eight adaptation examples and twenty evaluation samples per test user do not alone certify global prompt-disjointness.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "premier",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "pages": "29146--29156",
+        "source_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Premier_Personalized_Preference_Modulation_with_Learnable_User_Embedding_in_Text-to-Image_CVPR_2026_paper.html"
+      },
+      "reading_order": 4,
+      "reading_reason": "Contrast amortized user conditioning with explicit new-user optimization and prompt-dependent preference modulation."
+    },
+    {
+      "id": "pamela",
+      "title": "Personalizing Text-to-Image Generation to Individual Taste",
+      "short_name": "PAMELA",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "personalized-reward-guided-generation",
+      "summary": "Predicts individual aesthetic ratings and uses the personalized predictor to select iteratively rewritten prompts.",
+      "inclusion_reason": "Includes both rating prediction and tested user-specific generation steering, so it is not classified as prediction-only.",
+      "primary_url": "https://arxiv.org/abs/2604.07427",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2604.07427",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2604.07427",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://pamela-bench.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Paper-linked project; separate user-study protocol and predictor description."
+        },
+        {
+          "url": "https://github.com/PAMELA-bench/PAMELA_Predictor",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Author-linked URL returned HTTP 404 in this check; release availability is unverified, not evidence that no implementation exists."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Maerten, Anne-Sofie",
+        "Verwiebe, Juliane",
+        "Karthik, Shyamgopal",
+        "Prabhu, Ameya",
+        "Wagemans, Johan",
+        "Bethge, Matthias"
+      ],
+      "first_publication_date": "2026-04-08",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2604.07427",
+      "doi": null,
+      "official_code_url": "https://github.com/PAMELA-bench/PAMELA_Predictor",
+      "project_url": "https://pamela-bench.github.io/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "inaccessible",
+      "code_note": "Author-linked URL returned HTTP 404 in this check; release availability is unverified, not evidence that no implementation exists.",
+      "tasks": [
+        "preference_prediction",
+        "generation"
+      ],
+      "user_signals": [
+        "ratings"
+      ],
+      "methods": [
+        "user_representation",
+        "prompt_rewriting",
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study",
+        "personalized_scorer"
+      ],
+      "base_models": [
+        "FLUX.2-dev"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3–4: user-level rating prediction and separate iterative prompt search; Section 4.4 compares participant-specific outputs in a blind preference study.",
+      "limitations": "Unseen-user prediction results are distinct from a generation study on selected users. Release-card counts differ from rounded paper descriptions.",
+      "conflicts": [],
+      "related_ids": [
+        "pamela-dataset"
+      ],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "pamela",
+        "entry_type": "article",
+        "container": "arXiv preprint arXiv:2604.07427",
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2604.07427"
+      },
+      "reading_order": 6,
+      "reading_reason": "Connect personalized rating prediction to generation steering; separate prediction splits from target-user evaluation."
+    },
+    {
+      "id": "drum",
+      "title": "Draw Your Mind: Personalized Generation via Condition-Level Modeling in Text-to-Image Diffusion Models",
+      "short_name": "DrUM",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "summary": "Combines user profiling and a reusable condition-space adapter to personalize diffusion generation.",
+      "inclusion_reason": "PIP and MovieLens histories are used to condition generated images; separate style/subject transfer demonstrations do not define the inclusion.",
+      "primary_url": "https://arxiv.org/abs/2508.03481",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2508.03481",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2508.03481",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Kim_Draw_Your_Mind_Personalized_Generation_via_Condition-Level_Modeling_in_Text-to-Image_ICCV_2025_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official proceedings page and exported BibTeX checked directly; title/authors/year/pages matched."
+        },
+        {
+          "url": "https://github.com/Burf/DrUM",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Official paper-linked implementation, also cross-linked by the author model card."
+        },
+        {
+          "url": "https://huggingface.co/Burf/DrUM",
+          "kind": "model_card",
+          "checked_on": "2026-09-16",
+          "note": "Inference example and supported text-encoder/model families; distinguishes compatibility claims."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Kim, Hyungjin",
+        "Ahn, Seokho",
+        "Seo, Young-Duk"
+      ],
+      "first_publication_date": "2025-08-05",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2025,
+      "venue": "ICCV 2025",
+      "publication_status": "published",
+      "arxiv_id": "2508.03481",
+      "doi": null,
+      "official_code_url": "https://github.com/Burf/DrUM",
+      "project_url": null,
+      "data_url": null,
+      "model_url": "https://huggingface.co/Burf/DrUM",
+      "code_status": "available",
+      "code_note": "Official paper-linked implementation, also cross-linked by the author model card.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history",
+        "natural_language"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning",
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion v1",
+        "Stable Diffusion v2",
+        "Stable Diffusion XL",
+        "Stable Diffusion v3",
+        "FLUX"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 4–5: adapter training uses CC3M; evaluation uses PIP and MovieLens histories and multiple diffusion backbones. No new-user parameter tuning is required.",
+      "limitations": "Compatibility is not identical to uniform testing on every checkpoint. Historical movie interests can mix content and visual taste; target-user preference gains are not established by similarity alone.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "drum",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+        "pages": "17171--17180",
+        "source_url": "https://openaccess.thecvf.com/content/ICCV2025/html/Kim_Draw_Your_Mind_Personalized_Generation_via_Condition-Level_Modeling_in_Text-to-Image_ICCV_2025_paper.html"
+      }
+    },
+    {
+      "id": "viper",
+      "title": "ViPer: Visual Personalization of Generative Models via Individual Preference Learning",
+      "short_name": "ViPer",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "personalized-reward-guided-generation",
+      "summary": "Converts free-form comments about liked and disliked images into attributes that guide personalized sampling.",
+      "inclusion_reason": "Users explain their own likes/dislikes and the generator uses those inferred preferences across prompts.",
+      "primary_url": "https://arxiv.org/abs/2407.17365",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2407.17365",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2407.17365",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09492.pdf",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official ECCV proceedings paper, Sections 3–4."
+        },
+        {
+          "url": "https://viper.epfl.ch/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Paper-linked site describes the extractor, generation guidance and separate proxy metric."
+        },
+        {
+          "url": "https://github.com/EPFL-VILAB/ViPer",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Linked by the author project; includes generation and proxy code."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Salehi, Sogand",
+        "Shafiei, Mahdi",
+        "Yeo, Teresa",
+        "Bachmann, Roman",
+        "Zamir, Amir"
+      ],
+      "first_publication_date": "2024-07-24",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2024,
+      "venue": "ECCV 2024",
+      "publication_status": "published",
+      "arxiv_id": "2407.17365",
+      "doi": null,
+      "official_code_url": "https://github.com/EPFL-VILAB/ViPer",
+      "project_url": "https://viper.epfl.ch/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Linked by the author project; includes generation and proxy code.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes",
+        "natural_language"
+      ],
+      "methods": [
+        "user_representation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "target_user_study",
+        "llm_judge",
+        "personalized_scorer"
+      ],
+      "base_models": [
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3–4: preference extractor trained on simulated agents; human participants compare outputs including their own versus another user’s conditioning.",
+      "limitations": "A learned proxy and synthetic agents supplement rather than replace human evidence. Generic visual attributes may miss contextual or semantic preferences.",
+      "conflicts": [],
+      "related_ids": [
+        "viper-proxy"
+      ],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "viper",
+        "entry_type": "inproceedings",
+        "container": "European Conference on Computer Vision (ECCV)",
+        "pages": null,
+        "source_url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09492.pdf"
+      },
+      "reading_order": 2,
+      "reading_reason": "Inspect natural-language preference elicitation and the own-user versus other-user comparison."
+    },
+    {
+      "id": "pmg",
+      "title": "PMG : Personalized Multimodal Generation with Large Language Models",
+      "short_name": "PMG",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "summary": "Turns individual behavior histories into keywords and soft embeddings for personalized image generation.",
+      "inclusion_reason": "Included for demonstrated visual generation, even though some inputs originate in recommendation; ordinary item ranking would be outside scope.",
+      "primary_url": "https://arxiv.org/abs/2404.08677",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2404.08677",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2404.08677",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://arxiv.org/html/2404.08677",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Paper header links the ACM DOI and identifies the proceedings; publisher retrieval itself returned 403."
+        },
+        {
+          "url": "https://github.com/mindspore-lab/models/tree/master/research/huawei-noah/PMG",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Paper-linked URL returned HTTP 404 on 2026-09-16; candidate alternative implementation remains in backlog pending provenance and backbone checks."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3589334.3645633",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "Publisher-deposited DOI record confirms authors, title, Proceedings of the ACM Web Conference 2024 and publication date 2024-05-13."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Shen, Xiaoteng",
+        "Zhang, Rui",
+        "Zhao, Xiaoyan",
+        "Zhu, Jieming",
+        "Xiao, Xi"
+      ],
+      "first_publication_date": "2024-04-07",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2024,
+      "venue": "The Web Conference 2024",
+      "publication_status": "published",
+      "arxiv_id": "2404.08677",
+      "doi": "10.1145/3589334.3645633",
+      "official_code_url": "https://github.com/mindspore-lab/models/tree/master/research/huawei-noah/PMG",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "inaccessible",
+      "code_note": "Paper-linked URL returned HTTP 404 on 2026-09-16; candidate alternative implementation remains in backlog pending provenance and backbone checks.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history",
+        "natural_language"
+      ],
+      "methods": [
+        "prompt_rewriting",
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion v1.5"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Method and experiments use image generation on fashion and movie-history tasks; Appendix A specifies SD v1.5.",
+      "limitations": "LPIPS and SSIM against historical or target images cannot by themselves establish target-user liking. Some conversation contexts are templated.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "pmg",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the ACM Web Conference 2024",
+        "pages": null,
+        "source_url": "https://api.crossref.org/works/10.1145/3589334.3645633"
+      }
+    },
+    {
+      "id": "pigreward",
+      "title": "Personalized Reward Modeling for Text-to-Image Generation",
+      "short_name": "PIGReward",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "personalized-reward-guided-generation",
+      "summary": "Builds user-conditioned judging criteria and uses personalized feedback to optimize generation prompts.",
+      "inclusion_reason": "Sections 3.2 and 5.6 go beyond scoring to user-specific image generation via prompt optimization.",
+      "primary_url": "https://arxiv.org/abs/2511.19458",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2511.19458",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2511.19458",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+          "kind": "conference_decision",
+          "checked_on": "2026-09-16",
+          "note": "Exact title and authors found in official accepted-paper list; no proceedings publication inferred."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Lee, Jeongeun",
+        "Heo, Ryang",
+        "Lee, Dongha"
+      ],
+      "first_publication_date": "2025-11-21",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2026,
+      "venue": "ECCV 2026",
+      "publication_status": "accepted",
+      "arxiv_id": "2511.19458",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "Not found as of 2026-09-16",
+      "tasks": [
+        "preference_prediction",
+        "generation"
+      ],
+      "user_signals": [
+        "pairwise",
+        "rankings"
+      ],
+      "methods": [
+        "user_representation",
+        "reward_guidance",
+        "prompt_rewriting",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study",
+        "personalized_scorer"
+      ],
+      "base_models": [
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Section 5.6 uses SDXL and the same annotators who created PIGBench; automatic evaluation also reuses PIGReward itself.",
+      "limitations": "Self-scoring can favor the optimized metric. No user-specific training is needed for the reward predictor; the separate prompt-optimization stage fine-tunes a prompt model, so a single no-optimization label would be misleading.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "PIGBench",
+        "user_identity": "Per-user preference records",
+        "feedback": "Ranking image groups for common prompts",
+        "size_note": "75 user records (paper Section 4)",
+        "evaluation_note": "Real-user judgments; Section 5.6 reuses annotators for generation evaluation. Dataset release not verified in this pass.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "pigreward",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers"
+      }
+    },
+    {
+      "id": "pipbench",
+      "title": "PIPBench: A Profile-Inclusive Framework for Personalized Image Generation Evaluation",
+      "short_name": "PIPBench",
+      "resource_type": "paper",
+      "scope": "supporting",
+      "category": "personalized-generation-benchmark",
+      "summary": "Evaluates generation from preferred-image histories using real-user profiles and synthetic agents.",
+      "inclusion_reason": "Primarily a benchmark for user-specific generation, with prompt-enrichment/generation baselines. Kept in supporting rather than counted again as a core method.",
+      "primary_url": "https://arxiv.org/abs/2607.06440",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2607.06440",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2607.06440",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+          "kind": "conference_decision",
+          "checked_on": "2026-09-16",
+          "note": "Exact title found in the official accepted-paper list. List abbreviates one name as WEE CHING; full author form follows the paper."
+        },
+        {
+          "url": "https://wuyuhang05.github.io/PIPBench/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "ArXiv-linked project; dataset units and human/agent distinction inspected."
+        },
+        {
+          "url": "https://github.com/wuyuhang05/PIPBench",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Project-linked repository contains prompt-enrichment experiments and benchmark links."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/wuyuhang05/PIPBench/master/README.md",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Default branch master README checked: prompt-enrichment code, generation baselines and author-linked Hugging Face data/checkpoints."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Wu, Yuhang",
+        "Zhang, Shuxiang",
+        "Ching, Wee Hian",
+        "Zhang, Chi",
+        "Liu, Miao"
+      ],
+      "first_publication_date": "2026-07-07",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2026,
+      "venue": "ECCV 2026",
+      "publication_status": "accepted",
+      "arxiv_id": "2607.06440",
+      "doi": null,
+      "official_code_url": "https://github.com/wuyuhang05/PIPBench",
+      "project_url": "https://wuyuhang05.github.io/PIPBench/",
+      "data_url": "https://huggingface.co/datasets/AirRain03/PIPBench",
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Project-linked repository contains prompt-enrichment experiments and benchmark links.",
+      "tasks": [
+        "evaluation",
+        "generation"
+      ],
+      "user_signals": [
+        "likes"
+      ],
+      "methods": [
+        "retrieval_in_context",
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "llm_judge",
+        "similarity_proxy",
+        "third_party_human"
+      ],
+      "base_models": null,
+      "used_for_generation": "yes",
+      "evidence_note": "Project dataset/evaluation sections separate real users from synthetic agents and describe persona-aware judging.",
+      "limitations": "A persona-aware LLM judge and reference similarity are proxies; agreement with human annotations is not a target-user generation win rate.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "PIPBench",
+        "user_identity": "Profile-linked user/agent records",
+        "feedback": "Preferred images; real choices versus simulated ranking",
+        "size_note": "76 real users + 175 agents; 1,369 testcases; 1,876 images (project page)",
+        "evaluation_note": "650 real-user and 719 synthetic-agent testcases. Human calibration and judge agreement are distinct from target-user output preference.",
+        "origin": "mixed"
+      },
+      "bibtex": {
+        "key": "pipbench",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers"
+      },
+      "reading_order": 5,
+      "reading_reason": "Inspect what a benchmark actually treats as preference ground truth and how simulated profiles differ from people."
+    },
+    {
+      "id": "lapis",
+      "title": "LAPIS: A novel dataset for personalized image aesthetic assessment",
+      "short_name": "LAPIS",
+      "resource_type": "paper",
+      "scope": "supporting",
+      "category": "personalized-aesthetic-assessment",
+      "summary": "Provides artwork ratings and rater attributes for studying individual aesthetic-score prediction.",
+      "inclusion_reason": "Direct support for personalized visual scoring, but this paper does not demonstrate steering a generator.",
+      "primary_url": "https://arxiv.org/abs/2504.07670",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2504.07670",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2504.07670",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2025W/CVEU/html/Maerten_LAPIS_A_novel_dataset_for_personalized_image_aesthetic_assessment_CVPRW_2025_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official proceedings page and exported BibTeX checked directly; title/authors/year/pages matched."
+        },
+        {
+          "url": "https://github.com/Anne-SofieMaerten/LAPIS",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Paper-linked data project with access-request instructions; not presented as an implementation release."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Maerten, Anne-Sofie",
+        "Chen, Li-Wei",
+        "De Winter, Stefanie",
+        "Bossens, Christophe",
+        "Wagemans, Johan"
+      ],
+      "first_publication_date": "2025-04-10",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2025,
+      "venue": "CVPR Workshops 2025 (CVEU)",
+      "publication_status": "published",
+      "arxiv_id": "2504.07670",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": "https://github.com/Anne-SofieMaerten/LAPIS",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_applicable",
+      "code_note": "Linked repository is a dataset project; no separate implementation claim.",
+      "tasks": [
+        "preference_prediction",
+        "evaluation"
+      ],
+      "user_signals": [
+        "ratings"
+      ],
+      "methods": [
+        "user_representation"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "not_applicable",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "no",
+      "evidence_note": "Abstract and benchmark study evaluate PIAA models on art images; no generation-control experiment is established here.",
+      "limitations": "Art-image rating prediction does not automatically transfer to generated-image preferences. Dataset requires an access request.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "LAPIS",
+        "user_identity": "Annotator-linked ratings and personal attributes",
+        "feedback": "Individual aesthetic ratings of artworks",
+        "size_note": "11,723 artwork images (paper abstract)",
+        "evaluation_note": "Prediction benchmark, not a generation user study. Access by request through author repository.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "lapis",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops",
+        "pages": "6356--6365",
+        "source_url": "https://openaccess.thecvf.com/content/CVPR2025W/CVEU/html/Maerten_LAPIS_A_novel_dataset_for_personalized_image_aesthetic_assessment_CVPRW_2025_paper.html"
+      }
+    },
+    {
+      "id": "pick-a-pic",
+      "title": "Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation",
+      "short_name": "Pick-a-Pic / PickScore",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "population-preference-alignment",
+      "summary": "Introduces crowdsourced image comparisons and PickScore, a general preference scorer used for ranking.",
+      "inclusion_reason": "PickScore is population-level rather than user-conditioned; the user-linked dataset is separately listed as supporting.",
+      "primary_url": "https://arxiv.org/abs/2305.01569",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2305.01569",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2305.01569",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/73aacd8b3b05b4b503d58310b523553c-Abstract-Conference.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official title, authors, venue and DOI."
+        },
+        {
+          "url": "https://github.com/yuvalkirstain/PickScore",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Explicitly linked in the paper; PickScore model and Pick-a-Pic data instructions."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Kirstain, Yuval",
+        "Polyak, Adam",
+        "Singer, Uriel",
+        "Matiana, Shahbuland",
+        "Penna, Joe",
+        "Levy, Omer"
+      ],
+      "first_publication_date": "2023-05-02",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2023,
+      "venue": "NeurIPS 2023",
+      "publication_status": "published",
+      "arxiv_id": "2305.01569",
+      "doi": "10.52202/075280-1594",
+      "official_code_url": "https://github.com/yuvalkirstain/PickScore",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Explicitly linked in the paper; PickScore model and Pick-a-Pic data instructions.",
+      "tasks": [
+        "preference_prediction",
+        "generation",
+        "evaluation"
+      ],
+      "user_signals": [
+        "pairwise"
+      ],
+      "methods": [
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "not_applicable",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "held_out_user_ratings",
+        "generic_reward"
+      ],
+      "base_models": null,
+      "used_for_generation": "yes",
+      "evidence_note": "Abstract and scoring formulation: PickScore scores prompt/image pairs without a user condition.",
+      "limitations": "Real users supplied preferences, but the scorer is not personalized merely because its training data came from people.",
+      "conflicts": [],
+      "related_ids": [
+        "pick-a-pic-dataset"
+      ],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "pickapic",
+        "entry_type": "inproceedings",
+        "container": "Advances in Neural Information Processing Systems 36",
+        "pages": null,
+        "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/73aacd8b3b05b4b503d58310b523553c-Abstract-Conference.html"
+      }
+    },
+    {
+      "id": "styledrop",
+      "title": "StyleDrop: Text-to-Image Generation in Any Style",
+      "short_name": "StyleDrop",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "style-customization",
+      "summary": "Adapts a text-to-image model to a supplied style example, with optional iterative feedback.",
+      "inclusion_reason": "Reference images specify the desired style; iterative feedback overlaps preference methods but does not establish broad user-history preference inference.",
+      "primary_url": "https://arxiv.org/abs/2306.00983",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2306.00983",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2306.00983",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d33b177b69425e7685b0b1c05bd2a5e4-Abstract-Conference.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official conference landing page uses a title variant."
+        },
+        {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/d33b177b69425e7685b0b1c05bd2a5e4-Paper-Conference.pdf",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official paper title matches arXiv: Generation in Any Style; confirms venue."
+        },
+        {
+          "url": "https://styledrop.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Author project inspected; style assets are linked, but no official training implementation was found."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Sohn, Kihyuk",
+        "Ruiz, Nataniel",
+        "Lee, Kimin",
+        "Chin, Daniel Castro",
+        "Blok, Irina",
+        "Chang, Huiwen",
+        "Barber, Jarred",
+        "Jiang, Lu",
+        "Entis, Glenn",
+        "Li, Yuanzhen",
+        "Hao, Yuan",
+        "Essa, Irfan",
+        "Rubinstein, Michael",
+        "Krishnan, Dilip"
+      ],
+      "first_publication_date": "2023-06-01",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2023,
+      "venue": "NeurIPS 2023",
+      "publication_status": "published",
+      "arxiv_id": "2306.00983",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": "https://styledrop.github.io/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "Not found as of 2026-09-16",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "reference_target",
+        "pairwise"
+      ],
+      "methods": [
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "not_applicable",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "third_party_human",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Muse"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Abstract and method describe efficient style tuning and human or automated feedback.",
+      "limitations": "Style can be part of a preference; the distinction here is the demonstrated task, not mutual exclusivity of style and preference.",
+      "conflicts": [
+        "NeurIPS landing page title is StyleDrop: Text-to-Image Synthesis of Any Style; linked paper PDF and arXiv use Text-to-Image Generation in Any Style. This is one work, not two."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "styledrop",
+        "entry_type": "inproceedings",
+        "container": "Advances in Neural Information Processing Systems 36",
+        "pages": null,
+        "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/d33b177b69425e7685b0b1c05bd2a5e4-Paper-Conference.pdf"
+      }
+    },
+    {
+      "id": "dreambooth",
+      "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+      "short_name": "DreamBooth",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "subject-customization",
+      "summary": "Fine-tunes a generator to reproduce a specific subject in new text-described contexts.",
+      "inclusion_reason": "Subject identity preservation is distinct from inferring a user’s preferences across subjects.",
+      "primary_url": "https://arxiv.org/abs/2208.12242",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2208.12242",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2208.12242",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official proceedings page and exported BibTeX checked directly; title/authors/year/pages matched."
+        },
+        {
+          "url": "https://dreambooth.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Author project links a dataset repository, not a complete official training implementation."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Ruiz, Nataniel",
+        "Li, Yuanzhen",
+        "Jampani, Varun",
+        "Pritch, Yael",
+        "Rubinstein, Michael",
+        "Aberman, Kfir"
+      ],
+      "first_publication_date": "2022-08-25",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2023,
+      "venue": "CVPR 2023",
+      "publication_status": "published",
+      "arxiv_id": "2208.12242",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": "https://dreambooth.github.io/",
+      "data_url": "https://github.com/google/dreambooth",
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "Not found as of 2026-09-16",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "reference_target"
+      ],
+      "methods": [
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "not_applicable",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "not_applicable",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "similarity_proxy",
+        "third_party_human"
+      ],
+      "base_models": [
+        "Imagen"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Abstract and method use subject reference images and prior preservation.",
+      "limitations": "User-selected subject images specify a target; they need not reveal general visual taste.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "dreambooth",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "pages": "22500--22510",
+        "source_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html"
+      }
+    },
+    {
+      "id": "diffusion-dpo",
+      "title": "Diffusion Model Alignment Using Direct Preference Optimization",
+      "short_name": "Diffusion-DPO",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "population-preference-alignment",
+      "summary": "Optimizes diffusion likelihood differences from pooled human image comparisons.",
+      "inclusion_reason": "A useful preference-training baseline, without conditioning the original method on individual users.",
+      "primary_url": "https://arxiv.org/abs/2311.12908",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2311.12908",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and v1 submission date; abstract establishes the task."
+        },
+        {
+          "url": "https://arxiv.org/html/2311.12908",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Methods and experiments, including the sections named in evidence_note."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wallace_Diffusion_Model_Alignment_Using_Direct_Preference_Optimization_CVPR_2024_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official proceedings page and exported BibTeX checked directly; title/authors/year/pages matched."
+        },
+        {
+          "url": "https://github.com/SalesforceAIResearch/DiffusionDPO",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Research-organization implementation with matching paper metadata; execution not tested."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Wallace, Bram",
+        "Dang, Meihua",
+        "Rafailov, Rafael",
+        "Zhou, Linqi",
+        "Lou, Aaron",
+        "Purushwalkam, Senthil",
+        "Ermon, Stefano",
+        "Xiong, Caiming",
+        "Joty, Shafiq",
+        "Naik, Nikhil"
+      ],
+      "first_publication_date": "2023-11-21",
+      "first_publication_date_note": "Earliest public version verified in this pass: arXiv v1 submission date; earlier unverified submissions are not inferred.",
+      "publication_year": 2024,
+      "venue": "CVPR 2024",
+      "publication_status": "published",
+      "arxiv_id": "2311.12908",
+      "doi": null,
+      "official_code_url": "https://github.com/SalesforceAIResearch/DiffusionDPO",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Research-organization implementation with matching paper metadata; execution not tested.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "pairwise"
+      ],
+      "methods": [
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "not_applicable",
+      "evaluates_new_prompts": "yes",
+      "evaluation": [
+        "third_party_human",
+        "generic_reward"
+      ],
+      "base_models": [
+        "Stable Diffusion XL 1.0"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Abstract and method train on pooled Pick-a-Pic comparisons; paper also studies AI feedback.",
+      "limitations": "Improved average human preference is not evidence of individual preference identification or personalization.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "diffusiondpo",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "pages": "8228--8238",
+        "source_url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wallace_Diffusion_Model_Alignment_Using_Direct_Preference_Optimization_CVPR_2024_paper.html"
+      }
+    },
+    {
+      "id": "pamela-dataset",
+      "title": "PAMELA dataset",
+      "short_name": "PAMELA dataset",
+      "resource_type": "dataset",
+      "scope": "supporting",
+      "category": "user-level-preference-data",
+      "summary": "Publishes generated images with participant-linked ratings and separate seen/unseen-user splits.",
+      "inclusion_reason": "User-linked visual feedback directly supports personalized scoring and generation research.",
+      "primary_url": "https://huggingface.co/datasets/bethgelab/PAMELA",
+      "sources": [
+        {
+          "url": "https://huggingface.co/datasets/bethgelab/PAMELA",
+          "kind": "dataset_card",
+          "checked_on": "2026-09-16",
+          "note": "Release README inspected, including participant_id and split-level rating counts."
+        },
+        {
+          "url": "https://huggingface.co/datasets/bethgelab/PAMELA/raw/main/README.md",
+          "kind": "dataset_card",
+          "checked_on": "2026-09-16",
+          "note": "Actual release-card text fetched successfully."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": "https://huggingface.co/datasets/bethgelab/PAMELA",
+      "model_url": null,
+      "code_status": "not_applicable",
+      "code_note": "Resource record; see parent paper for implementation.",
+      "tasks": [
+        "evaluation",
+        "preference_prediction"
+      ],
+      "user_signals": [
+        "ratings"
+      ],
+      "methods": [],
+      "user_data_origin": "real",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "not_applicable",
+      "evidence_note": "Release README inspected, including participant_id and split-level rating counts.",
+      "limitations": "Counts below are release-card claims, not independently recomputed from all data files.",
+      "conflicts": [
+        "Paper/project describe about 70,000 ratings, 5,000 images and 200 users; release card reports 69,904 ratings, 5,077 images and 199 participants. The paper’s 15 ratings per image is not assumed to hold exactly for the released data."
+      ],
+      "related_ids": [
+        "pamela"
+      ],
+      "dataset_details": {
+        "name": "PAMELA released dataset",
+        "user_identity": "participant_id; 199 participants in release card",
+        "feedback": "Individual ratings plus image/user metadata",
+        "size_note": "69,904 ratings; 5,077 images; 199 participants (release card)",
+        "evaluation_note": "Seen/unseen user splits are rating-prediction protocols; generation study belongs to the paper.",
+        "origin": "real"
+      }
+    },
+    {
+      "id": "pick-a-pic-dataset",
+      "title": "Pick-a-Pic user-linked comparisons",
+      "short_name": "Pick-a-Pic user-linked comparisons",
+      "resource_type": "dataset",
+      "scope": "supporting",
+      "category": "user-level-preference-data",
+      "summary": "Collects real-user image choices with user identifiers that can be grouped into histories.",
+      "inclusion_reason": "Supports user-level training when identifiers and suitable histories are retained; PickScore itself remains adjacent.",
+      "primary_url": "https://github.com/yuvalkirstain/PickScore",
+      "sources": [
+        {
+          "url": "https://github.com/yuvalkirstain/PickScore",
+          "kind": "dataset_card",
+          "checked_on": "2026-09-16",
+          "note": "Paper data section and PPD Section 5.2 establish user IDs and user-disjoint filtering. Official repository links versioned datasets."
+        },
+        {
+          "url": "https://arxiv.org/html/2305.01569",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Data collection and dataset links."
+        },
+        {
+          "url": "https://arxiv.org/html/2501.06655",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Section 5.2: user ID grouping, sparse-history filtering and held-out users."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": "https://huggingface.co/datasets/yuvalkirstain/pickapic_v2",
+      "model_url": null,
+      "code_status": "not_applicable",
+      "code_note": "Resource record; see parent paper for implementation.",
+      "tasks": [
+        "evaluation",
+        "preference_prediction"
+      ],
+      "user_signals": [
+        "pairwise"
+      ],
+      "methods": [],
+      "user_data_origin": "real",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "not_applicable",
+      "evidence_note": "Paper data section and PPD Section 5.2 establish user IDs and user-disjoint filtering. Official repository links versioned datasets.",
+      "limitations": "Dataset versions and filters change pair/user counts. Direct Hugging Face v2 card request returned 401; no current unrestricted download claim.",
+      "conflicts": [],
+      "related_ids": [
+        "pick-a-pic"
+      ],
+      "dataset_details": {
+        "name": "Pick-a-Pic",
+        "user_identity": "User identifiers; verify retained columns for chosen version",
+        "feedback": "Real-user pairwise preferences (ties may be present)",
+        "size_note": "Version-specific; no unified count across v1/v2 or filtered histories",
+        "evaluation_note": "Collection records real choices; does not itself evaluate new personalized outputs. v2 access could not be verified (HTTP 401).",
+        "origin": "real"
+      }
+    },
+    {
+      "id": "viper-proxy",
+      "title": "ViPer personalized proxy metric",
+      "short_name": "ViPer personalized proxy metric",
+      "resource_type": "tool",
+      "scope": "supporting",
+      "category": "personalized-preference-model",
+      "summary": "Scores a query image conditioned on liked and disliked context images.",
+      "inclusion_reason": "A user-conditioned evaluator, separately distinguished from the ViPer generation procedure.",
+      "primary_url": "https://github.com/EPFL-VILAB/ViPer",
+      "sources": [
+        {
+          "url": "https://github.com/EPFL-VILAB/ViPer",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Official README separates ViPer generation from proxy usage; metric.py takes positive/negative contexts and a query image."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "official_code_url": "https://github.com/EPFL-VILAB/ViPer",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Code for a scorer; not a standalone generator.",
+      "tasks": [
+        "preference_prediction",
+        "evaluation"
+      ],
+      "user_signals": [
+        "likes_dislikes"
+      ],
+      "methods": [
+        "retrieval_in_context"
+      ],
+      "user_data_origin": "synthetic",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "personalized_scorer"
+      ],
+      "base_models": [],
+      "used_for_generation": "no",
+      "evidence_note": "Official README separates ViPer generation from proxy usage; metric.py takes positive/negative contexts and a query image.",
+      "limitations": "A proxy prediction is neither a direct target-user vote nor independent evidence if the same metric is optimized and evaluated.",
+      "conflicts": [],
+      "related_ids": [
+        "viper"
+      ],
+      "dataset_details": null
+    },
+    {
+      "id": "adman",
+      "title": "I Am AdMan: A Pipeline for Automatic Generation of Personalized Advertising Imagery",
+      "short_name": "AdMan",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "primary_url": "https://arxiv.org/abs/2609.12694",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2609.12694",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2609.12694",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Kolominsky-Rabas, Victor",
+        "Müller, Leopold",
+        "Budcke, Claudius",
+        "Kühl, Niklas"
+      ],
+      "first_publication_date": "2026-09-11",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2609.12694",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation identified in the checked paper and exact-title discovery search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "natural_language"
+      ],
+      "methods": [
+        "user_representation",
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "third_party_human",
+        "llm_judge"
+      ],
+      "base_models": [
+        "gpt-image-1",
+        "gemini-3-pro-image-preview"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [
+        "advertising-personalization-user-study"
+      ],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "adman",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2609.12694"
+      },
+      "summary": "Turns individual customer profiles into personalized advertising scenes, with product references and an artifact-checking agent.",
+      "inclusion_reason": "Individual interests and style preferences steer actual image generation; product identity is a separate constraint.",
+      "evidence_note": "Sections 4–5: two API-model configurations, four products, 100 customer profiles and six celebrity personas; 1,745 generated advertisements. Expert inspection and artifact rates assess technical feasibility, not customers choosing their own outputs.",
+      "limitations": "Inferred personas are indirect evidence of visual taste. The judge checks artifacts; it is not a validated personalized preference reward. Customer/prompt holdout protocols are not established."
+    },
+    {
+      "id": "advertising-personalization-user-study",
+      "title": "Enabling and Understanding Personalization in AI-Generated Advertising Imagery",
+      "short_name": "Advertising personalization user study",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "primary_url": "https://arxiv.org/abs/2609.12697",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2609.12697",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2609.12697",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Kolominsky-Rabas, Victor",
+        "Müller, Leopold",
+        "Budcke, Claudius",
+        "Germelmann, Claas Christian",
+        "Kühl, Niklas"
+      ],
+      "first_publication_date": "2026-09-11",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2609.12697",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation identified in the checked paper and exact-title discovery search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "natural_language"
+      ],
+      "methods": [
+        "user_representation",
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study"
+      ],
+      "base_models": [
+        "gpt-image-1"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [
+        "adman"
+      ],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "advertisingpersonalizationuserstudy",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2609.12697"
+      },
+      "summary": "Generates advertising images from individual survey profiles and studies how personalization intensity affects the recipients’ responses.",
+      "inclusion_reason": "Demonstrates profile-conditioned generation and collects judgments from the corresponding people.",
+      "evidence_note": "Sections 3–5: 100 participants, four products and three personalization levels; profile collection precedes ratings of generated advertisements. Outcomes include advertisement/product attitudes and purchase intention.",
+      "limitations": "Reported moderate-personalization advantage is specific to this advertising study. Purchase intention is self-report, not observed conversion or a general aesthetic preference metric; no trained-model user/prompt holdout is established."
+    },
+    {
+      "id": "palate",
+      "title": "PALATE: Personalized Aesthetic Learning through Adaptive Taste Evolution for Multi-User Portrait Retouching",
+      "short_name": "PALATE",
+      "resource_type": "paper",
+      "scope": "supporting",
+      "category": "personalized-aesthetic-assessment",
+      "primary_url": "https://arxiv.org/abs/2608.18622",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2608.18622",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2608.18622",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Wang, Jingxuan",
+        "Mei, Yifan",
+        "Niu, Yuxia",
+        "Jiao, Chaowan",
+        "Shen, Qijin"
+      ],
+      "first_publication_date": "2026-08-19",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2608.18622",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation identified in the checked paper and exact-title discovery search.",
+      "tasks": [
+        "preference_prediction",
+        "evaluation"
+      ],
+      "user_signals": [
+        "rankings"
+      ],
+      "methods": [
+        "user_representation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "not_applicable",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "no",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "PALATE portrait-ranking protocol",
+        "user_identity": "25 volunteers with persistent user identities",
+        "feedback": "Rankings of three expert retouches per source portrait",
+        "size_note": "Paper: 1,000 PPR10K source portraits, 25,000 rankings and 75,000 derived pairwise comparisons",
+        "evaluation_note": "Joint held-out-user/image evaluation; no standalone public ranking release verified.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "palate",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2608.18622"
+      },
+      "summary": "Learns shared, cohort and individual rewards to rank existing expert-retouched portrait candidates; no new image synthesis is demonstrated.",
+      "inclusion_reason": "Provides a personalized selector that can support editing, rather than a tested generative editor.",
+      "evidence_note": "Evaluation splits users 17/2/6 and images 700/100/200. New users fit a regularized residual; shared reward and candidates stay fixed. Support images exclude query images.",
+      "limitations": "Accuracy measures candidate preference prediction. It does not establish improved synthesized portraits or prompt generalization."
+    },
+    {
+      "id": "fedpaie",
+      "title": "Learning Color Grading, No Photo Sharing: Federated Aesthetic Preference Learning for Personalized Image Enhancement",
+      "short_name": "FedPAIE",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "personalized-reward-guided-generation",
+      "primary_url": "https://arxiv.org/abs/2607.27659",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2607.27659",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2607.27659",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        },
+        {
+          "url": "https://github.com/LouckXu/FedPAIE",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Paper link and repository file inventory verified; README supplies stage-specific training and inference instructions."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Xu, Chuanzhi",
+        "Tao, Ziyuan",
+        "KNell, Jean Julien",
+        "Chen, Yanrong",
+        "Guo, Haolan",
+        "Yin, Xuanhua",
+        "Mahmood, Adnan",
+        "Cai, Weidong"
+      ],
+      "first_publication_date": "2026-07-30",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2607.27659",
+      "doi": null,
+      "official_code_url": "https://github.com/LouckXu/FedPAIE",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Paper-linked repository contains training, evaluation, model and inference code; not executed.",
+      "tasks": [
+        "editing",
+        "preference_prediction"
+      ],
+      "user_signals": [
+        "ratings"
+      ],
+      "methods": [
+        "user_representation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "not_applicable",
+      "evaluation": [
+        "held_out_user_ratings",
+        "personalized_scorer",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "CLUT-Net"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "fedpaie",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2607.27659"
+      },
+      "summary": "Calibrates a federated aesthetic scorer for each user and uses it to adapt a lightweight color-grading enhancer.",
+      "inclusion_reason": "Actually transforms images using individual ratings; the task is enhancement, not text-to-image synthesis.",
+      "evidence_note": "Section 4.1 reserves 37 Flickr-AES users for open-world evaluation. Both scorer calibration and enhancer adaptation optimize parameters. Enhancement gain is measured with the guiding personalized scorer; fidelity uses image metrics.",
+      "limitations": "Proxy improvement does not establish target-user preference for enhanced outputs. Federated training alone is not a formal privacy guarantee."
+    },
+    {
+      "id": "prac",
+      "title": "Personalized Image Aesthetic Assessment via Preference-rich Sample Mining and Cohort Merging",
+      "short_name": "PRAC",
+      "resource_type": "paper",
+      "scope": "supporting",
+      "category": "personalized-aesthetic-assessment",
+      "primary_url": "https://arxiv.org/abs/2607.15752",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2607.15752",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2607.15752",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        },
+        {
+          "url": "https://github.com/yzc-ippl/PRAC",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Paper-linked repository checked: release announcement without implementation."
+        },
+        {
+          "url": "https://yzc-ippl.github.io/PRAC/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Author claim of ACM MM 2026 acceptance; not treated as independent formal-decision evidence."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Yang, Zhichao",
+        "Gu, Tianjiao",
+        "Zhang, Zhixianhe",
+        "Sheng, Xiangfei",
+        "Chen, Pengfei",
+        "Li, Leida"
+      ],
+      "first_publication_date": "2026-07-17",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2607.15752",
+      "doi": null,
+      "official_code_url": "https://github.com/yzc-ippl/PRAC",
+      "project_url": "https://yzc-ippl.github.io/PRAC/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "announced",
+      "code_note": "Repository currently contains README, a figure and project-site docs; implementation/model release is promised.",
+      "tasks": [
+        "preference_prediction"
+      ],
+      "user_signals": [
+        "ratings"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "not_applicable",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "no",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "prac",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2607.15752"
+      },
+      "summary": "Selects informative aesthetic examples and merges models from similar users to predict individual image ratings.",
+      "inclusion_reason": "A personalized aesthetic predictor; no generation experiment is demonstrated.",
+      "evidence_note": "Sections 3–4: target-user tuning follows sample mining; evaluation uses separate test users on PARA, Flickr-AES, REAL-CUR and AADB, with 10/100-shot protocols. mPLUG-Owl3 is the predictor, not a generative image backbone.",
+      "limitations": "Author sources claim ACM MM 2026 acceptance; no official conference decision/proceedings were verified, so formal venue remains unset. Rating correlation is not generation evidence."
+    },
+    {
+      "id": "xpass-vis",
+      "title": "XPASS-Vis: A Dataset for Cross-Domain Personalized Image Aesthetic Assessment",
+      "short_name": "XPASS-Vis",
+      "resource_type": "paper",
+      "scope": "supporting",
+      "category": "personalized-aesthetic-assessment",
+      "primary_url": "https://arxiv.org/abs/2606.15629",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2606.15629",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2606.15629",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Hayashi, Takato",
+        "Takahara, Hiroaki",
+        "Mawalim, Candy Olivia",
+        "Narimatsu, Hiromi",
+        "Kimura, Akisato",
+        "Kumano, Shiro",
+        "Okada, Shogo"
+      ],
+      "first_publication_date": "2026-06-14",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2606.15629",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "announced",
+      "code_note": "Paper promises dataset and code upon acceptance; no public release URL verified.",
+      "tasks": [
+        "preference_prediction",
+        "evaluation"
+      ],
+      "user_signals": [
+        "ratings"
+      ],
+      "methods": [
+        "user_representation"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "not_applicable",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "no",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "XPASS-Vis",
+        "user_identity": "Same 129 annotators across three visual domains",
+        "feedback": "Overall aesthetic and nine emotion ratings",
+        "size_note": "Paper: 6,526 stimuli; 87,836 user–stimulus interactions",
+        "evaluation_note": "User-level cross-validation plus per-target calibration; data/code announced, not verified released.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "xpassvis",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2606.15629"
+      },
+      "summary": "Introduces shared-user ratings across artwork, fashion and landscapes to study cross-domain personalized aesthetic prediction.",
+      "inclusion_reason": "User-level cross-domain evaluation resource, without a tested image-generation controller.",
+      "evidence_note": "Section 4.4 uses five-fold user-level cross-validation; target users receive separate fine-tuning with 100 ratings, 50 test ratings and remaining validation ratings. This is user transfer with calibration.",
+      "limitations": "Cross-domain scoring results do not validate cross-domain generation. Public release remains unverified."
+    },
+    {
+      "id": "zipp",
+      "title": "ZIPP:Zero-shot Image Personalization from Personas",
+      "short_name": "ZIPP",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "primary_url": "https://arxiv.org/abs/2606.08841",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2606.08841",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2606.08841",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        },
+        {
+          "url": "https://behavior-in-the-wild.github.io/zipp.html",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Author page confirms method and model/benchmark descriptions; no implementation link found."
+        },
+        {
+          "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+          "kind": "conference_decision",
+          "checked_on": "2026-09-16",
+          "note": "Title variant, matching author list and exact project link establish ECCV acceptance; proceedings not checked."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "SI, Harini",
+        "Singh, Somesh",
+        "Singla, Yaman Kumar",
+        "Doermann, David",
+        "Shah, Rajiv Ratn"
+      ],
+      "first_publication_date": "2026-06-07",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": "ECCV 2026",
+      "publication_status": "accepted",
+      "arxiv_id": "2606.08841",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": "https://behavior-in-the-wild.github.io/zipp.html",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation identified in the checked paper and exact-title discovery search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "natural_language",
+        "implicit_history"
+      ],
+      "methods": [
+        "user_representation",
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy",
+        "personalized_scorer",
+        "target_user_study"
+      ],
+      "base_models": [
+        "Stable Diffusion XL",
+        "Stable Diffusion 3.5",
+        "Stable Diffusion 3",
+        "FLUX.1-dev"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [
+        "Conference lists the title as Zero-Shot Image Personalization from Personas and links the same author project; arXiv retains the ZIPP prefix.",
+        "Appendix G describes four comparison conditions including own-versus-other persona, but Table 15 allocates counts differently; do not infer a validated own-versus-other win rate."
+      ],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "ZIPBench",
+        "user_identity": "Matched Reddit/Civitai accounts with inferred personas",
+        "feedback": "Behavioral histories and generated images, not a released table of explicit aesthetic choices",
+        "size_note": "Paper: 1.5K users and 40K Civitai generations",
+        "evaluation_note": "Persona inference and account matching need scrutiny; no public dataset release verified.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "zipp",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2606.08841"
+      },
+      "summary": "Uses natural-language personas to rewrite prompts for frozen image generators, with graph-mined histories or survey-derived profiles.",
+      "inclusion_reason": "Individual personas condition actual generation; inferred demographic taste is distinguished from directly stated visual preferences.",
+      "evidence_note": "Appendices B/G: frozen image backbones; 50 participants supply intake profiles and judge personalized outputs without per-user fitting. Offline evaluation also uses CLIP/PIGReward proxies. Strict prompt-disjointness is not established.",
+      "limitations": "Graph persona mining requires shared training and behavioral data; zero-shot generation does not mean the whole pipeline uses no user information."
+    },
+    {
+      "id": "dppmg",
+      "title": "Discrete Preference Learning for Personalized Multimodal Generation",
+      "short_name": "DPPMG",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "primary_url": "https://arxiv.org/abs/2604.20434",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2604.20434",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2604.20434",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3805712.3809552",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "Publisher-deposited title, ordered authors, SIGIR proceedings, publication date and pages verified."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Zhang, Yuting",
+        "Sun, Ying",
+        "Shen, Dazhong",
+        "Xie, Ziwei",
+        "Liu, Feng",
+        "Zhang, Changwang",
+        "Liu, Xiang",
+        "Wang, Jun",
+        "Xiong, Hui"
+      ],
+      "first_publication_date": "2026-04-22",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2026,
+      "venue": "SIGIR 2026",
+      "publication_status": "published",
+      "arxiv_id": "2604.20434",
+      "doi": "10.1145/3805712.3809552",
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation identified in the checked paper and exact-title discovery search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "ratings",
+        "implicit_history"
+      ],
+      "methods": [
+        "user_representation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "no",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy",
+        "third_party_human"
+      ],
+      "base_models": [
+        "Stable Diffusion v1.5"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "dppmg",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "pages": "2375--2385",
+        "source_url": "https://api.crossref.org/works/10.1145/3805712.3809552"
+      },
+      "summary": "Quantizes graph-based user preferences into modality-specific tokens that condition personalized images and text.",
+      "inclusion_reason": "Movie ratings and advertising clicks condition image synthesis, not only recommendation scores.",
+      "evidence_note": "Sections 5.1/5.3: timestamp-based 8:1:1 interaction split, not held-out users. Thirty judges rank 50 movie cases using histories; they are not established as the original history owners.",
+      "limitations": "Movie preference and advertising clicks can mix semantic interests with visual taste. Cold-start user optimization and prompt-disjoint evaluation are not demonstrated."
+    },
+    {
+      "id": "collaborative-dpo-editing",
+      "title": "Personalized Image Editing in Text-to-Image Diffusion Models via Collaborative Direct Preference Optimization",
+      "short_name": "C-DPO editing",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "primary_url": "https://arxiv.org/abs/2511.05616",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2511.05616",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Canonical title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2511.05616",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full method and evaluation protocol; details in evidence_note."
+        },
+        {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/f503d55f1b711673591c88e943c59695-Bibtex-Conference.bib",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Official exported BibTeX confirms title, authors, DOI, venue, year and pages."
+        },
+        {
+          "url": "https://personalized-editing.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Direct link to the implementation."
+        },
+        {
+          "url": "https://github.com/ConnorDunlop/Personalized-Image-Editing",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "README and repository file inventory checked, including training and inference components."
+        }
+      ],
+      "verified_on": "2026-09-16",
+      "authors": [
+        "Dunlop, Connor",
+        "Zheng, Matthew",
+        "Venkatesh, Kavana",
+        "Yanardag, Pinar"
+      ],
+      "first_publication_date": "2025-11-06",
+      "first_publication_date_note": "Earliest full public paper verified in this pass: arXiv v1 submission; earlier announcements are not assumed to contain the paper.",
+      "publication_year": 2025,
+      "venue": "NeurIPS 2025",
+      "publication_status": "published",
+      "arxiv_id": "2511.05616",
+      "doi": "10.52202/085713-5592",
+      "official_code_url": "https://github.com/ConnorDunlop/Personalized-Image-Editing",
+      "project_url": "https://personalized-editing.github.io/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Author-linked code includes SFT, graph training, collaborative DPO and inference; not executed.",
+      "tasks": [
+        "editing",
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes"
+      ],
+      "methods": [
+        "user_representation",
+        "prompt_rewriting",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "yes",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "llm_judge",
+        "similarity_proxy",
+        "third_party_human",
+        "target_user_study"
+      ],
+      "base_models": [
+        "FLUX.1-dev with ControlNet"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "C-DPO editing preference protocol",
+        "user_identity": "Synthetic profiles; separate real-user survey",
+        "feedback": "Liked/disliked editing attributes",
+        "size_note": "Paper: 3,000 synthetic users and 144K preference samples; approximately 2,900/100 train/test users",
+        "evaluation_note": "Repository provides a download script; asset contents and counts were not independently downloaded.",
+        "origin": "synthetic"
+      },
+      "bibtex": {
+        "key": "collaborativedpoediting",
+        "entry_type": "inproceedings",
+        "container": "Advances in Neural Information Processing Systems",
+        "pages": "167742--167771",
+        "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/f503d55f1b711673591c88e943c59695-Bibtex-Conference.bib"
+      },
+      "summary": "Learns graph-based user preferences and a collaborative DPO prompt policy to drive personalized diffusion edits.",
+      "inclusion_reason": "Uses liked/disliked attributes for user-specific edits and also demonstrates image generation.",
+      "evidence_note": "Section 5 holds out 100 synthetic users; Appendix B infers new embeddings without retraining. Fifty crowdworkers judge synthetic profiles; Appendix E separately elicits ten participants’ own preferences and evaluates their edits.",
+      "limitations": "Main training preferences are synthetic. The small real-user study has five object types and should not be equated with the larger third-party comparison."
+    },
+    {
+      "id": "difashion",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": "https://github.com/YiyanXu/DiFashion",
+      "code_status": "available",
+      "code_note": "Author-linked repository and README accessible; training/inference code listed. Not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "user_representation"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "third_party_human",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion 2-base"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "iFashion and Polyvore-U",
+        "user_identity": "Dataset user identifiers link outfit/product interactions.",
+        "feedback": "Implicit product/outfit clicks or interactions.",
+        "size_note": "Active users have at least five interacted outfits; four-item outfits used after filtering.",
+        "evaluation_note": "8:1:1 split of interacted outfits; not an explicit held-out-user split.",
+        "origin": "real"
+      },
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "First arXiv submission; proceedings appeared later.",
+      "short_name": "DiFashion",
+      "title": "Diffusion Models for Generative Outfit Recommendation",
+      "authors": [
+        "Xu, Yiyan",
+        "Wang, Wenjie",
+        "Feng, Fuli",
+        "Ma, Yunshan",
+        "Zhang, Jizhi",
+        "He, Xiangnan"
+      ],
+      "arxiv_id": "2402.17279",
+      "doi": "10.1145/3626772.3657719",
+      "first_publication_date": "2024-02-27",
+      "publication_year": 2024,
+      "venue": "SIGIR 2024",
+      "publication_status": "published",
+      "primary_url": "https://arxiv.org/abs/2402.17279",
+      "summary": "Generates actual fashion-item images, either completing an outfit or producing an entire outfit, conditioned on a user’s historical fashion interactions.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2402.17279",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2402.17279",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Read methods, experiments, evaluation protocol and available appendices."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3626772.3657719",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "ACM-deposited metadata verifies full title, author order, proceedings, year and pages."
+        },
+        {
+          "url": "https://github.com/YiyanXu/DiFashion",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Linked by the paper; public README accessible and implementation files listed."
+        }
+      ],
+      "bibtex": {
+        "key": "difashion2024",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "pages": "1350--1359",
+        "source_url": "https://api.crossref.org/works/10.1145/3626772.3657719"
+      },
+      "evidence_note": "Sections 3–4: shared SD2 generates images from category-specific history embeddings and outfit conditions. The 8:1:1 split is over interacted outfits; MTurk workers judge histories belonging to others.",
+      "limitations": "Fashion-only generation; click/history alignment is a proxy for aesthetic preference. Cold-start and prompt-disjoint evaluation are not established. Shared model training is required, but the reported inference mechanism does not optimize a model per new user.",
+      "inclusion_reason": "User-specific interaction histories condition actual image synthesis, rather than only predicting item identifiers."
+    },
+    {
+      "id": "pigeon",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": "https://github.com/YiyanXu/Pigeon",
+      "code_status": "available",
+      "code_note": "Author-linked repository and README accessible; training/inference code listed. Not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history",
+        "ratings",
+        "reference_target"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "third_party_human",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "LaVIT-7B-v2",
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [
+        "Official GitHub README reverses Peng Yan to Yan Peng; ACM Crossref and arXiv metadata agree on given Peng / family Yan, used here."
+      ],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "SER30K-derived histories and MovieLens-Latest-small posters",
+        "user_identity": "Synthetic theme-level sticker users; real MovieLens identifiers.",
+        "feedback": "Same-theme sticker sequences and movie ratings >=4; pseudo-labeled preference pairs for DPO.",
+        "size_note": "Six interactions per sliding-window sample (five context, one target).",
+        "evaluation_note": "8:1:1 sample split; sticker reference from another theme, movie reference equals target; no explicit user-disjoint evaluation.",
+        "origin": "mixed"
+      },
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "First arXiv submission; proceedings appeared later.",
+      "short_name": "Pigeon",
+      "title": "Personalized Image Generation with Large Multimodal Models",
+      "authors": [
+        "Xu, Yiyan",
+        "Wang, Wenjie",
+        "Zhang, Yang",
+        "Tang, Biao",
+        "Yan, Peng",
+        "Feng, Fuli",
+        "He, Xiangnan"
+      ],
+      "arxiv_id": "2410.14170",
+      "doi": "10.1145/3696410.3714843",
+      "first_publication_date": "2024-10-18",
+      "publication_year": 2025,
+      "venue": "WWW 2025",
+      "publication_status": "published",
+      "primary_url": "https://arxiv.org/abs/2410.14170",
+      "summary": "Filters visual tokens in user histories with reference-aware masks, learns personalized image tokens using LaVIT, and decodes them with SDXL; alignment combines history reconstruction and pseudo-preference DPO.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2410.14170",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2410.14170",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Read methods, experiments, evaluation protocol and available appendices."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3696410.3714843",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "ACM-deposited metadata verifies full title, author order, proceedings, year and pages."
+        },
+        {
+          "url": "https://github.com/YiyanXu/Pigeon",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Linked by the paper; public README accessible and implementation files listed."
+        }
+      ],
+      "bibtex": {
+        "key": "pigeon2025",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the ACM on Web Conference 2025",
+        "pages": "264--274",
+        "source_url": "https://api.crossref.org/works/10.1145/3696410.3714843"
+      },
+      "evidence_note": "Appendices B/C: sticker users are synthetic theme identities; MovieLens retains real ratings >=4. Six-interaction windows receive an 8:1:1 sample split. DPO labels use CLIP-based rewards; MTurk workers infer others’ tastes. Movie reference equals the target image.",
+      "limitations": "Sticker histories are synthetic theme identities. Movie liking is not necessarily poster-aesthetic liking. Sample splitting does not establish generalization to unseen users; adjacent sliding windows may share history images. Human results are third-party judgments, not target-user satisfaction.",
+      "inclusion_reason": "User-specific interaction histories condition actual image synthesis, rather than only predicting item identifiers."
+    },
+    {
+      "id": "fashiondpo",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": "https://github.com/LinkMingzhe/FashionDPO",
+      "code_status": "available",
+      "code_note": "Author-linked repository and README accessible; training/inference code listed. Not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history",
+        "pairwise"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "third_party_human",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "DiFashion (Stable Diffusion 2)"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [
+        "Paper links github.com/Yzcreator/FashionDPO; the public repository is now github.com/LinkMingzhe/FashionDPO."
+      ],
+      "related_ids": [
+        "difashion"
+      ],
+      "dataset_details": {
+        "name": "iFashion and Polyvore-U",
+        "user_identity": "Real user IDs from historical item/outfit interactions.",
+        "feedback": "Real implicit interaction histories; generated pairwise preferences from automated experts.",
+        "size_note": "Each epoch samples 1,000 training outfits; seven generated candidates per outfit; five fine-tuning epochs.",
+        "evaluation_note": "Training/test outfit split; five designers score 30 result sets, without a target-user satisfaction test.",
+        "origin": "mixed"
+      },
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "First arXiv submission; proceedings appeared later.",
+      "short_name": "FashionDPO",
+      "title": "FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization",
+      "authors": [
+        "Yu, Mingzhe",
+        "Ma, Yunshan",
+        "Wu, Lei",
+        "Wang, Changshuo",
+        "Li, Xue",
+        "Meng, Lei"
+      ],
+      "arxiv_id": "2504.12900",
+      "doi": "10.1145/3726302.3729976",
+      "first_publication_date": "2025-04-17",
+      "publication_year": 2025,
+      "venue": "SIGIR 2025",
+      "publication_status": "published",
+      "primary_url": "https://arxiv.org/abs/2504.12900",
+      "summary": "Fine-tunes the history-conditioned DiFashion generator with DPO pairs derived from automatic quality, outfit-compatibility and personalization feedback.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2504.12900",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2504.12900",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Read methods, experiments, evaluation protocol and available appendices."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3726302.3729976",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "ACM-deposited metadata verifies full title, author order, proceedings, year and pages."
+        },
+        {
+          "url": "https://github.com/LinkMingzhe/FashionDPO",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Linked by the paper; public README accessible and implementation files listed."
+        }
+      ],
+      "bibtex": {
+        "key": "fashiondpo2025",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "pages": "212--222",
+        "source_url": "https://api.crossref.org/works/10.1145/3726302.3729976"
+      },
+      "evidence_note": "Sections 4–5: seven candidates are labeled by MiniCPM quality, VBPR compatibility and CLIP history similarity, then train shared LoRA DPO. Five designers evaluate style/color/fabric/variety; they are not the history owners.",
+      "limitations": "Automatic pairwise labels mix shared fashion criteria with history-similarity personalization. Human study primarily assesses fashion properties, not individual-history owners’ satisfaction. User-disjoint and prompt-disjoint generalization are not established.",
+      "inclusion_reason": "User-specific interaction histories condition actual image synthesis, rather than only predicting item identifiers."
+    },
+    {
+      "id": "dualfashion",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": "https://github.com/LinkMingzhe/DualFashion",
+      "code_status": "available",
+      "code_note": "Author-linked repository and README accessible; training/inference code listed. Not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "user_representation"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy",
+        "llm_judge"
+      ],
+      "base_models": [
+        "Dual-Diffusion",
+        "Stable Diffusion 3 medium components"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [
+        "difashion",
+        "fashiondpo"
+      ],
+      "dataset_details": {
+        "name": "iFashion and Polyvore-U with structured captions",
+        "user_identity": "Real user-history IDs inherited from fashion datasets.",
+        "feedback": "Implicit historical interactions converted into sampled attribute-level preference text.",
+        "size_note": "344,186 iFashion item captions extracted; Polyvore-U categories predicted using an iFashion-trained classifier.",
+        "evaluation_note": "PFITB and GOR automatic metrics; full paper does not specify a disjoint-user split.",
+        "origin": "real"
+      },
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "First arXiv submission; proceedings appeared later.",
+      "short_name": "DualFashion",
+      "title": "Dual-Diffusional Generative Fashion Recommendation",
+      "authors": [
+        "Yu, Mingzhe",
+        "Wu, Lei",
+        "Sun, Qianru",
+        "Ma, Yunshan"
+      ],
+      "arxiv_id": "2605.17357",
+      "doi": "10.1145/3805712.3809557",
+      "first_publication_date": "2026-05-17",
+      "publication_year": 2026,
+      "venue": "SIGIR 2026",
+      "publication_status": "published",
+      "primary_url": "https://arxiv.org/abs/2605.17357",
+      "summary": "Uses a dual image/text diffusion Transformer to generate fashion item images and structured captions, conditioned on attribute-level preferences mined from the user’s item history.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2605.17357",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2605.17357",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Read methods, experiments, evaluation protocol and available appendices."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3805712.3809557",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "ACM-deposited metadata verifies full title, author order, proceedings, year and pages."
+        },
+        {
+          "url": "https://github.com/LinkMingzhe/DualFashion",
+          "kind": "official_repository",
+          "checked_on": "2026-09-16",
+          "note": "Linked by the paper; public README accessible and implementation files listed."
+        }
+      ],
+      "bibtex": {
+        "key": "dualfashion2026",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+        "pages": "2264--2273",
+        "source_url": "https://api.crossref.org/works/10.1145/3805712.3809557"
+      },
+      "evidence_note": "Sections 4–5: Gemini extracts history attributes; a shared image/text diffusion model generates fashion items and descriptions. Personalization uses CLIP history similarity; Gemini judges text compatibility. No target-user study or explicit user-disjoint split established.",
+      "limitations": "Attribute extraction and augmentation are machine generated; evaluation is mainly similarity-based, with Gemini judging text compatibility. It does not establish target-user satisfaction, cold-start generalization, or prompt-disjoint generalization. Domain is fashion-item synthesis.",
+      "inclusion_reason": "User-specific interaction histories condition actual image synthesis, rather than only predicting item identifiers."
+    },
+    {
+      "id": "cg4ctr",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "cohort-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": "https://github.com/HaoYang0123/Creative_Generation_Pipeline",
+      "code_status": "partial",
+      "code_note": "Repository accessible with reward model and inpainting modules; README documents sampled commercial data and says full data forthcoming; prompt-model release not established. No run performed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "prompt_rewriting",
+        "reward_guidance",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "online_engagement",
+        "generic_reward"
+      ],
+      "base_models": [
+        "Stable Diffusion (inpainting; version not established)"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "Earliest full public version verified here: arXiv v1 submission; formal publication is recorded separately.",
+      "title": "A New Creative Generation Pipeline for Click-Through Rate with Stable Diffusion Model",
+      "authors": [
+        "Yang, Hao",
+        "Yuan, Jianxin",
+        "Yang, Shuai",
+        "Xu, Linhe",
+        "Yuan, Shuo",
+        "Zeng, Yifan"
+      ],
+      "arxiv_id": "2401.10934",
+      "first_publication_date": "2024-01-17",
+      "short_name": "CG4CTR",
+      "venue": "WWW 2024 Companion",
+      "publication_status": "published",
+      "publication_year": 2024,
+      "doi": "10.1145/3589335.3648315",
+      "primary_url": "https://arxiv.org/abs/2401.10934",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2401.10934",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2401.10934",
+          "kind": "paper",
+          "note": "Full paper downloaded and methods/experiments inspected.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://www.sigweb.sigweb.hosting.acm.org/toc/www24a.html",
+          "kind": "proceedings",
+          "note": "Official companion TOC; exact title and authors.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://github.com/HaoYang0123/Creative_Generation_Pipeline",
+          "kind": "official_repository",
+          "note": "Paper footnote links this repository; visible reward_model and stable_diffusion_inpainting directories.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3589335.3648315",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "Publisher-deposited title, author order, venue, year and pages checked."
+        }
+      ],
+      "summary": "Generates product backgrounds using cohort-conditioned prompts and CTR-guided training.",
+      "inclusion_reason": "IR advertising comparison: actual visual generation, but the demonstrated signal is not an individual visual-preference history.",
+      "evidence_note": "Sections 3.3/4.2.2 explicitly generate prompts for each user group, then serve matching-group creatives. Online Shopee tests measure CTR/revenue; 20M/2M samples do not establish a user-disjoint split.",
+      "limitations": "Cohort-level adaptation is coarser than within-prompt individual taste. Demographic grouping does not establish an individual aesthetic preference.",
+      "bibtex": {
+        "key": "cg4ctr",
+        "entry_type": "inproceedings",
+        "container": "Companion Proceedings of the ACM Web Conference 2024",
+        "pages": "180--189",
+        "source_url": "https://api.crossref.org/works/10.1145/3589335.3648315"
+      }
+    },
+    {
+      "id": "caig",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "population-preference-alignment",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": "https://github.com/JD-GenX/CAIG",
+      "code_status": "available",
+      "code_note": "Paper-linked old owner redirects to current official repo. Training/inference scripts, pcpo, pipeline, tiny_dataset visible; README says full PCPO training code and datasets/models released March16 2025. No execution/downloaded checkpoint validation.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "prompt_rewriting",
+        "reward_guidance",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "not_applicable",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "online_engagement",
+        "generic_reward"
+      ],
+      "base_models": [
+        "MajicmixRealistic-v7",
+        "ControlNet-v1.1"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "Earliest full public version verified here: arXiv v1 submission; formal publication is recorded separately.",
+      "title": "CTR-Driven Advertising Image Generation with Multimodal Large Language Models",
+      "authors": [
+        "Chen, Xingye",
+        "Feng, Wei",
+        "Du, Zhenbang",
+        "Wang, Weizhen",
+        "Chen, Yanyin",
+        "Wang, Haohan",
+        "Liu, Linkai",
+        "Li, Yaoyu",
+        "Zhao, Jinyuan",
+        "Li, Yu",
+        "Zhang, Zheng",
+        "Lv, Jingjing",
+        "Shen, Junjie",
+        "Lin, Zhangang",
+        "Shao, Jingping",
+        "Shao, Yuanjie",
+        "You, Xinge",
+        "Gao, Changxin",
+        "Sang, Nong"
+      ],
+      "arxiv_id": "2502.06823",
+      "first_publication_date": "2025-02-05",
+      "short_name": "CAIG",
+      "venue": "WWW 2025",
+      "publication_status": "published",
+      "publication_year": 2025,
+      "doi": "10.1145/3696410.3714836",
+      "primary_url": "https://arxiv.org/abs/2502.06823",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2502.06823",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2502.06823",
+          "kind": "paper",
+          "note": "Full paper downloaded and methods/experiments inspected.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://archives.iw3c2.org/www2025/www2025-proceedings.pdf",
+          "kind": "proceedings",
+          "note": "Official WWW25 proceedings index PDF page29 lists exact title/DOI/all authors.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://github.com/JD-GenX/CAIG",
+          "kind": "official_repository",
+          "note": "Paper links Chenguoz/CAIG which redirects to JD-GenX/CAIG. Accessible code and README.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3696410.3714836",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "Publisher-deposited title, author order, venue, year and pages checked."
+        }
+      ],
+      "summary": "Optimizes advertising backgrounds with aggregate CTR rewards and product-centric prompt preference optimization.",
+      "inclusion_reason": "IR advertising comparison: actual visual generation, but the demonstrated signal is not an individual visual-preference history.",
+      "evidence_note": "Appendix A.5 explicitly says CTR aggregates all users and identifies lack of personalization. Online CTR and offline product-background evaluation do not constitute target-user visual preference votes.",
+      "limitations": "Do not infer individual preference conditioning from the term preference optimization. Individual-preference RLHF is future work in the checked paper.",
+      "bibtex": {
+        "key": "caig",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the ACM on Web Conference 2025",
+        "pages": "2262--2275",
+        "source_url": "https://api.crossref.org/works/10.1145/3696410.3714836"
+      }
+    },
+    {
+      "id": "perfusion",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": null,
+      "code_status": "not_found",
+      "code_note": "No author-linked public implementation found in inspected paper or exact-title search; do not confuse PerFusion with NVIDIA subject-customization Perfusion.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes",
+        "rankings"
+      ],
+      "methods": [
+        "user_representation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "no",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "personalized_scorer",
+        "generic_reward",
+        "similarity_proxy",
+        "third_party_human",
+        "online_engagement"
+      ],
+      "base_models": [
+        "Stable Diffusion v1.5 (generic-DPO initialization)"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "PerFusion Pick-a-Pic and industrial protocols",
+        "user_identity": "Pick-a-Pic IDs and merchant profiles",
+        "feedback": "Selections/rejections within one candidate image set",
+        "size_note": "Table 1: industrial 54,995 users, 60,616 prompts, 607,328 samples; candidate group size 5",
+        "evaluation_note": "Private industrial data; record-level split and own-reward evaluation, not an unseen-user study.",
+        "origin": "real"
+      },
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "Earliest full public version verified here: arXiv v1 submission; formal publication is recorded separately.",
+      "title": "Sell It Before You Make It: Revolutionizing E-Commerce with Personalized AI-Generated Items",
+      "authors": [
+        "Lin, Jianghao",
+        "Du, Peng",
+        "Liu, Jiaqi",
+        "Li, Weite",
+        "Yu, Yong",
+        "Zhang, Weinan",
+        "Cao, Yang"
+      ],
+      "arxiv_id": "2503.22182",
+      "doi": "10.1145/3770854.3783918",
+      "first_publication_date": "2025-03-28",
+      "publication_year": 2026,
+      "publication_status": "published",
+      "venue": "KDD 2026",
+      "primary_url": "https://arxiv.org/abs/2503.22182",
+      "sources": [
+        {
+          "url": "https://api.crossref.org/works/10.1145/3770854.3783918",
+          "kind": "publisher_metadata",
+          "note": "ACM-deposited metadata fetched successfully; exact title, ordered authors, venue, pages and publication date.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://arxiv.org/html/2503.22182",
+          "kind": "paper",
+          "note": "Read method and evaluation sections in full HTML.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://arxiv.org/abs/2503.22182",
+          "kind": "paper",
+          "note": "Verified original submission date and authors.",
+          "checked_on": "2026-09-16"
+        }
+      ],
+      "short_name": "PerFusion / AIGI",
+      "limitations": "Own reward model is used for personal-generation evaluation. Merchant preferences and downstream shopper CTR are distinct; 6-month online A/B across 17 categories compares AI versus human-designed items, not personalized versus nonpersonalized generation alone.",
+      "summary": "Uses merchant profiles and selections among candidate images to train personalized reward and diffusion models for product design.",
+      "inclusion_reason": "The individual is a merchant/designer; candidate-group preference learning conditions actual image generation.",
+      "evidence_note": "Sections 3–6: group means multiple images judged by one merchant, not a population cohort. 8:1:1 splits group records. PerFusionRM scores personalized generation; eight experts assess image quality. Online AI-vs-human item comparisons do not isolate merchant satisfaction.",
+      "bibtex": {
+        "key": "perfusion",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.1",
+        "pages": "2323--2334",
+        "source_url": "https://api.crossref.org/works/10.1145/3770854.3783918"
+      }
+    },
+    {
+      "id": "ecommerce-banners",
+      "resource_type": "paper",
+      "scope": "adjacent",
+      "category": "cohort-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": null,
+      "code_status": "not_found",
+      "code_note": "No author-linked public implementation found in inspected paper or exact-title search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "no",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "third_party_human"
+      ],
+      "base_models": [
+        "Stable Diffusion v1.5",
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [
+        "arXiv first submission is 2024-02-28 despite 2403 identifier; use submission history. arXiv template has placeholder DOI; use publisher-deposited Crossref metadata."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "Earliest full public version verified here: arXiv v1 submission; formal publication is recorded separately.",
+      "title": "Chaining Text-to-Image and Large Language Model: A Novel Approach for Generating Personalized e-commerce Banners",
+      "authors": [
+        "Vashishtha, Shanu",
+        "Prakash, Abhinav",
+        "Morishetti, Lalitesh",
+        "Nag, Kaushiki",
+        "Arora, Yokila",
+        "Kumar, Sushant",
+        "Achan, Kannan"
+      ],
+      "arxiv_id": "2403.05578",
+      "doi": "10.1145/3637528.3671636",
+      "first_publication_date": "2024-02-28",
+      "publication_year": 2024,
+      "publication_status": "published",
+      "venue": "KDD 2024",
+      "primary_url": "https://arxiv.org/abs/2403.05578",
+      "sources": [
+        {
+          "url": "https://api.crossref.org/works/10.1145/3637528.3671636",
+          "kind": "publisher_metadata",
+          "note": "ACM-deposited metadata fetched successfully; exact title, ordered authors, venue, pages and publication date.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://arxiv.org/html/2403.05578",
+          "kind": "paper",
+          "note": "Read method and evaluation sections in full HTML.",
+          "checked_on": "2026-09-16"
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.05578",
+          "kind": "paper",
+          "note": "Verified original submission date and authors.",
+          "checked_on": "2026-09-16"
+        }
+      ],
+      "short_name": "Personalized e-commerce banners",
+      "limitations": "Cohort/item relevance is narrower and coarser than within-prompt individual visual taste. LLM prompt method does not uniformly beat raw product-name prompts in this study.",
+      "summary": "Selects a product through user/cohort affinity, then converts product attributes into a banner-generation prompt.",
+      "inclusion_reason": "Relevant KDD application boundary: personalization selects the product; the study does not establish individual aesthetic conditioning within a fixed product prompt.",
+      "evidence_note": "Sections 3.0.3/4.2: item selection follows cohort affinity; Llama 2 constructs product prompts. Twenty-four data scientists/quality analysts assess 15 products’ image relevance, not target shoppers’ tastes.",
+      "bibtex": {
+        "key": "ecommercebanners",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "pages": "5825--5835",
+        "source_url": "https://api.crossref.org/works/10.1145/3637528.3671636"
+      }
+    },
+    {
+      "id": "bggen",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "personalized-reward-guided-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation found in the checked paper and exact-title search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "reward_guidance"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "online_engagement"
+      ],
+      "base_models": [
+        "Stable Diffusion with ControlNet (version not specified)"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "Earliest full public version verified here: arXiv v1 submission; formal publication is recorded separately.",
+      "title": "Dynamic Product Image Generation and Recommendation at Scale for Personalized E-commerce",
+      "short_name": "BGGEN",
+      "authors": [
+        "Czapp, Ádám Tibor",
+        "Jani, Mátyás",
+        "Domián, Bálint",
+        "Hidasi, Balázs"
+      ],
+      "arxiv_id": "2408.12392",
+      "doi": "10.1145/3640457.3688045",
+      "first_publication_date": "2024-08-22",
+      "publication_year": 2024,
+      "venue": "RecSys 2024 Industry",
+      "publication_status": "published",
+      "primary_url": "https://arxiv.org/abs/2408.12392",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2408.12392",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2408.12392v1",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Full paper: Sections 2–3, context-conditioned prompt selection and separate A/B phases."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3640457.3688045",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-16",
+          "note": "Publisher-deposited title, author order, venue, year and pages checked."
+        },
+        {
+          "url": "https://hidasi.eu/assets/pdf/bggen_recsys24_poster.pdf",
+          "kind": "author_project",
+          "checked_on": "2026-09-16",
+          "note": "Author-hosted poster uses the BGGEN label and describes user/product/placement-conditioned prompt selection."
+        }
+      ],
+      "summary": "Uses a contextual bandit to select background-generation prompts from user, product and placement features.",
+      "inclusion_reason": "User context affects the generated background through prompt choice; a narrow contextual personalization system.",
+      "evidence_note": "Sections 2–3: LinUCB selects among product-category prompts; generated backgrounds are cached. Phase III compares context-selected versus random prompts. Shared online bandit updates are distinct from per-user fitting.",
+      "limitations": "CTR measures engagement, not aesthetic satisfaction. A small predefined prompt pool and shared contexts limit preference expressiveness; no user-disjoint study is established.",
+      "bibtex": {
+        "key": "bggen",
+        "entry_type": "inproceedings",
+        "container": "18th ACM Conference on Recommender Systems",
+        "pages": "768--770",
+        "source_url": "https://api.crossref.org/works/10.1145/3640457.3688045"
+      }
+    },
+    {
+      "id": "adbooster",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "user-conditioned-generation",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "official_code_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation found in the checked paper and exact-title search.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "natural_language"
+      ],
+      "methods": [
+        "user_representation",
+        "prompt_rewriting",
+        "reward_guidance"
+      ],
+      "user_data_origin": "synthetic",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "simulation",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion outpainting (version not verified)"
+      ],
+      "used_for_generation": "yes",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "verified_on": "2026-09-16",
+      "first_publication_date_note": "Earliest full public version verified here: arXiv v1 submission; formal publication is recorded separately.",
+      "title": "AdBooster: Personalized Ad Creative Generation Using Stable Diffusion Outpainting",
+      "short_name": "AdBooster",
+      "authors": [
+        "Shilova, Veronika",
+        "Dos Santos, Ludovic",
+        "Vasile, Flavian",
+        "Racic, Gaëtan",
+        "Tanielian, Ugo"
+      ],
+      "arxiv_id": "2309.11507",
+      "doi": "10.1007/978-3-031-76878-1_5",
+      "first_publication_date": "2023-09-08",
+      "publication_year": 2025,
+      "venue": "Fashion x RecSys 2023 (2025 proceedings)",
+      "publication_status": "published",
+      "primary_url": "https://arxiv.org/abs/2309.11507",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2309.11507",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Title, ordered authors and original submission date checked."
+        },
+        {
+          "url": "https://arxiv.org/html/2309.11507",
+          "kind": "paper",
+          "checked_on": "2026-09-16",
+          "note": "Sections 3–4: query/context prompting, synthetic users and CLIP evaluation."
+        },
+        {
+          "url": "https://fashionxrecsys.github.io/fashionxrecsys-2023/",
+          "kind": "conference_decision",
+          "checked_on": "2026-09-16",
+          "note": "Workshop accepted-paper list; not a RecSys main-track paper."
+        },
+        {
+          "url": "https://link.springer.com/chapter/10.1007/978-3-031-76878-1_5",
+          "kind": "proceedings",
+          "checked_on": "2026-09-16",
+          "note": "Publisher confirms ordered authors, workshop, 2025 chapter publication and pages 73–93."
+        }
+      ],
+      "summary": "Outpaints product backgrounds using a user’s shopping query and context, with shared domain tuning.",
+      "inclusion_reason": "Demonstrates interest-conditioned image generation with simulated user profiles, a narrower setting than persistent personal taste.",
+      "evidence_note": "Section 4: thirty GPT-3.5-created profiles; four generated candidates are ranked and evaluated with CLIP against query/context. Shared model tuning does not fit each user.",
+      "limitations": "The reported uplift is CLIP similarity, not measured clicks or purchases. Real-user feedback is future work. Workshop held in 2023; proceedings chapter published in 2025.",
+      "bibtex": {
+        "key": "adbooster",
+        "entry_type": "inproceedings",
+        "container": "Revolutionizing Fashion and Retail: Proceedings of the Fifth fashionXrecsys Workshop",
+        "pages": "73--93",
+        "source_url": "https://link.springer.com/chapter/10.1007/978-3-031-76878-1_5"
+      }
+    }
+  ]
+}
