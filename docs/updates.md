@@ -35,3 +35,11 @@ Public implementation inventories were checked for Pigeon, DiFashion, FashionDPO
 ## 2026-09-21: literature returned from topic exploration
 
 Added DRC (ACM MM 2025), PASTA (ICML 2025; resolved prior backlog) and DesignPref (verified arXiv version, supporting UI preference assessment). Total: 41 records, comprising 38 papers and 3 standalone resources. Verified paper methods and metadata; DRC implementation files were identified but not executed. Unpublished research proposals remain outside this public repository.
+
+### Generation-method literature follow-up
+
+Added PAPA and ICG after full-method checks, bringing the catalog to 43 records: 40 papers and 3 standalone resources. PAPA is retained narrowly as simulated session-specific preference alignment; it does not establish real-user aesthetic alignment. Its claimed ECML PKDD acceptance remains unconfirmed. ICG is cited as EMNLP 2025 from official proceedings, despite its later arXiv record. Its human raters are not established as the conditioning users.
+
+Updated Premier with its available official adapter/user-embedding weights and commit-pinned code evidence. Its preference offset is prompt-dependent but does not read the current latent or actual timestep; native FLUX still uses time conditioning. Released linear adaptation does not enforce convex coefficients. Assets were inspected, not executed or downloaded.
+
+Additional incomplete leads are recorded in the backlog. Generic concept customization and adaptive guidance papers were used as boundary comparisons without inflating core coverage. Private research proposals remain outside this repository.

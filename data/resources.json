@@ -415,9 +415,27 @@
           "kind": "official_repository",
           "checked_on": "2026-09-16",
           "note": "Paper-linked repository includes training and inference; per-user adaptation is an optimization stage."
+        },
+        {
+          "url": "https://huggingface.co/pino10010/Premier",
+          "kind": "model_card",
+          "checked_on": "2026-09-21",
+          "note": "Official release file inventory: mod_adapter.safetensors, user_embedding.safetensors and adapter_config.yaml."
+        },
+        {
+          "url": "https://github.com/120L020904/Premier/blob/42473476a189b6b0127890a98e92b7edf49c0d59/scripts/pipeline/mod_adapters.py",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "TextImageResampler uses a zero timestep input; user/prompt-conditioned shared and distinct offsets."
+        },
+        {
+          "url": "https://github.com/120L020904/Premier/blob/42473476a189b6b0127890a98e92b7edf49c0d59/train/config/premier_user_linear.yaml",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "Released new-user linear adaptation config: softmax false, AdamW, batch size one."
         }
       ],
-      "verified_on": "2026-09-16",
+      "verified_on": "2026-09-21",
       "authors": [
         "Wang, Zihao",
         "Wei, Yuxiang",
@@ -438,9 +456,9 @@
       "official_code_url": "https://github.com/120L020904/Premier",
       "project_url": null,
       "data_url": null,
-      "model_url": null,
+      "model_url": "https://huggingface.co/pino10010/Premier",
       "code_status": "available",
-      "code_note": "Paper-linked repository includes training and inference; per-user adaptation is an optimization stage.",
+      "code_note": "Training and inference code identified, not executed. Official Hugging Face release contains modulation-adapter and user-embedding weights; files were inspected, not downloaded or reproduced.",
       "tasks": [
         "generation"
       ],
@@ -464,7 +482,7 @@
         "FLUX.1-dev"
       ],
       "used_for_generation": "yes",
-      "evidence_note": "Sections 4.3 and 5: new-user mixture coefficients are optimized; 50 test users are outside the 1,000 training users. Figure 4 uses experts judging histories.",
+      "evidence_note": "Sections 4–5: 50 unseen test users versus 1,000 training users; experts judge histories. Dispersion acts on adapter outputs. Code uses 30 x 1024 user parameters and prompt-dependent, block-specific text modulation. The preference offset does not read the current latent or actual timestep, while native FLUX modulation remains timestep-dependent. New-user coefficients are optimized; the released linear configuration does not impose a convex combination.",
       "limitations": "Expert judgments are not votes from the target users. Eight adaptation examples and twenty evaluation samples per test user do not alone certify global prompt-disjointness.",
       "conflicts": [],
       "related_ids": [],
@@ -3846,6 +3864,205 @@
         "pages": null,
         "source_url": "https://arxiv.org/abs/2511.20513"
       }
+    },
+    {
+      "resource_type": "paper",
+      "scope": "core",
+      "tasks": [
+        "generation"
+      ],
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "used_for_generation": "yes",
+      "related_ids": [],
+      "dataset_details": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "verified_on": "2026-09-21",
+      "id": "papa",
+      "title": "PAPA: Online Personalized Active Preference Alignment",
+      "short_name": "PAPA",
+      "category": "interactive-preference-generation",
+      "summary": "Online diffusion fine-tuning from simulated session-specific likes and dislikes.",
+      "inclusion_reason": "Simulated individual preference sets steer actual generation; real-user aesthetic alignment is not established.",
+      "primary_url": "https://arxiv.org/abs/2607.00486",
+      "authors": [
+        "Sarkar, Anindya",
+        "Nafi, Nasik Muhammad",
+        "Lyngaas, Isaac",
+        "Gopalakrishnan Meena, Muralikrishnan",
+        "Vorobeychik, Yevgeniy"
+      ],
+      "first_publication_date": "2026-07-01",
+      "first_publication_date_note": "Verified arXiv v1 date; earlier public versions were not established.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2607.00486",
+      "doi": null,
+      "bibtex": {
+        "key": "sarkar2026papa",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2607.00486"
+      },
+      "user_signals": [
+        "likes_dislikes",
+        "ratings"
+      ],
+      "methods": [
+        "active_elicitation"
+      ],
+      "evaluation": [
+        "simulation",
+        "generic_reward",
+        "similarity_proxy"
+      ],
+      "user_data_origin": "synthetic",
+      "new_user_optimization": "yes",
+      "base_models": [
+        "DDPM with a custom UNet",
+        "Stable Diffusion v1.5"
+      ],
+      "evidence_note": "Algorithm 1 fine-tunes diffusion parameters per session. Section 6 and Appendix Q replace humans with classifiers or score functions. Experiments cover class preferences and text-to-image reward optimization; Appendix M varies simulated rating weights.",
+      "limitations": "No verified real target-user study or held-out user/prompt protocol. Full diffusion fine-tuning, not adapter training.",
+      "conflicts": [
+        "Section 6 specifies eight feedback samples per interaction; Appendix U lists ten.",
+        "Repository citation omits two authors and retains placeholder arXiv metadata.",
+        "ECML PKDD 2026 acceptance is author-claimed; official confirmation remains pending."
+      ],
+      "official_code_url": "https://github.com/NasikNafi/papa",
+      "code_status": "partial",
+      "code_note": "MNIST/Fashion-MNIST training and sampling identified; dependencies and complete text-to-image coverage remain unverified. Not executed.",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2607.00486",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Title, ordered authors, v1 date and author-claimed acceptance."
+        },
+        {
+          "url": "https://arxiv.org/html/2607.00486",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Sections 4–6 and Appendices M, Q, U: adaptation, simulated feedback and backbones."
+        },
+        {
+          "url": "https://github.com/NasikNafi/papa",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "Author-linked implementation inventory and incomplete citation/dependency instructions."
+        }
+      ]
+    },
+    {
+      "resource_type": "paper",
+      "scope": "core",
+      "tasks": [
+        "generation",
+        "preference_prediction"
+      ],
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "used_for_generation": "yes",
+      "related_ids": [],
+      "dataset_details": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "verified_on": "2026-09-21",
+      "id": "icg",
+      "title": "ICG: Improving Cover Image Generation via MLLM-based Prompting and Personalized Preference Alignment",
+      "short_name": "ICG",
+      "category": "user-conditioned-generation",
+      "summary": "User-profile embeddings condition cover generation through a shared adapter trained with personalized and generic rewards.",
+      "inclusion_reason": "Individual user information changes generated covers, including fixed-item comparisons.",
+      "primary_url": "https://aclanthology.org/2025.emnlp-main.617/",
+      "authors": [
+        "Bian, Zhipeng",
+        "Zhu, Jieming",
+        "Liu, Qijiong",
+        "Lin, Wang",
+        "Cai, Guohao",
+        "Du, Zhaocheng",
+        "Sun, Jiacheng",
+        "Zhao, Zhou",
+        "Dong, Zhenhua"
+      ],
+      "first_publication_date": "2025-11",
+      "first_publication_date_note": "Verified ACL proceedings publication month, preceding the 2026 arXiv record; earlier public versions were not established.",
+      "publication_year": 2025,
+      "venue": "EMNLP 2025",
+      "publication_status": "published",
+      "arxiv_id": "2605.27374",
+      "doi": "10.18653/v1/2025.emnlp-main.617",
+      "bibtex": {
+        "key": "bian-etal-2025-icg",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+        "pages": "12268--12278",
+        "source_url": "https://aclanthology.org/2025.emnlp-main.617/"
+      },
+      "user_signals": [
+        "implicit_history",
+        "ratings",
+        "pairwise"
+      ],
+      "methods": [
+        "prompt_rewriting",
+        "user_representation",
+        "adapter_fine_tuning",
+        "reward_guidance"
+      ],
+      "evaluation": [
+        "third_party_human",
+        "generic_reward",
+        "similarity_proxy",
+        "held_out_user_ratings"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "base_models": [
+        "Stable Diffusion v1.5",
+        "Flux (variant unspecified)",
+        "Realistic Vision V4.0",
+        "Anything v4",
+        "Esthetic Retro Anime"
+      ],
+      "evidence_note": "Sections 3–4 condition shared adapters on pretrained user embeddings and train with behavior-derived preferences. Figure 5 varies users for fixed items. The 80/10/10 reward split is by user-item pairs. Section 4.4.3 uses 100 volunteers and 120 images without linking raters to conditioning users. Table 6 evaluates preference prediction; Section 4.6 reports offline recommendation metrics.",
+      "limitations": "Unclear unseen-user/prompt generation protocol and cold-start encoder behavior. Similarity is not target-user preference; no online A/B test.",
+      "conflicts": [],
+      "official_code_url": null,
+      "code_status": "not_found",
+      "code_note": "No author-linked implementation found in checked paper, proceedings or targeted search as of 2026-09-21.",
+      "sources": [
+        {
+          "url": "https://aclanthology.org/2025.emnlp-main.617/",
+          "kind": "proceedings",
+          "checked_on": "2026-09-21",
+          "note": "Title, authors, November 2025 date, pages, DOI and official BibTeX."
+        },
+        {
+          "url": "https://aclanthology.org/2025.emnlp-main.617.pdf",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Sections 3–4, Figure 5, Tables 6–7 and limitations."
+        },
+        {
+          "url": "https://arxiv.org/abs/2605.27374",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Identity and link to earlier ACL proceedings."
+        },
+        {
+          "url": "https://arxiv.org/html/2605.27374",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Methods and evaluator identity cross-checked against proceedings."
+        }
+      ]
     }
   ]
 }

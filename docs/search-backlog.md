@@ -65,3 +65,18 @@ DRC, PASTA and DesignPref now have verified catalog records. DesignPref is suppo
 Additional unresolved discovery: [Personalized Preference Optimization for Text-to-Image Generation using Large Language Models](https://openreview.net/pdf?id=4VzHv5s0Hp) is an anonymous submission; check authorship and possible overlap with admitted prompt-optimization work before adding. [Design LoRA](https://www.sciencedirect.com/science/article/pii/S1474034626007457) appeared in search with a November 2026 issue date: publication availability, methods and scope were not verified. No future-dated publication claim is made here.
 
 - [I-AM-G: Interest Augmented Multimodal Generator for Item Personalization](https://aclanthology.org/2024.emnlp-main.1187.pdf): discovered in the 2026-09-21 topic search; verify complete method, individual-user evaluation, author metadata and code before admission.
+
+## 2026-09-21 generation-method search follow-up
+
+The following are incomplete discovery leads, not admitted metadata or novelty evidence.
+
+| Lead | Source | Remaining checks |
+| --- | --- | --- |
+| TIMGen / Temporal Interest-Driven Multimodal Personalized Content Generation | [arXiv](https://arxiv.org/abs/2509.04330) | Abstract only; verify actual image generation, individual preference mechanism, ordered authors and evaluation protocol. |
+| MultiBO / Personalized Image Generation via Human-in-the-loop Bayesian Optimization | [Author-hosted PDF](https://rrajalaxmi.web.illinois.edu/papers/multibo.pdf) | Discovery only; verify full metadata, method, user study and official resources. |
+| DSPO / DSPO-LPO lead; title unresolved | [OpenReview PDF](https://openreview.net/pdf/ffaf5a65d1c1fbb39138127879e424007a9c1472.pdf) | Search extract mentions PPD-based personalization; direct access returned a verification challenge. Resolve identity and read full protocol before admission. |
+| Agentic Retoucher | [arXiv](https://arxiv.org/abs/2601.02046) | Verify whether localized editing conditions on individual taste/history rather than generic quality instructions. |
+| Creating spatial visualizations using fine-tuned interior design style models informed by user preferences | [Publisher lead](https://www.sciencedirect.com/science/article/abs/pii/S1474034624003343) | Discovery only; verify individual preference evidence, method, metadata and protocol. |
+| Diffusion Priors for Lightweight Personal…; title unresolved | [OpenReview PDF](https://openreview.net/pdf/7f8174de52a25ceb893b14d36a151ee1f7e69176.pdf) | Resolve full title, authors and possible version overlap with existing leads; no identity inferred from truncated search text. |
+
+Follow-ups on newly admitted records: PAPA needs official acceptance confirmation and full Stable Diffusion release coverage; ICG needs clarification of target-user evaluation, unseen-user/prompt splits, cold-start behavior and implementation availability. Unknowns remain explicit in their catalog records.
