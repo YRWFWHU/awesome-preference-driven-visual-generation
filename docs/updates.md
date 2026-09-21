@@ -31,3 +31,7 @@ Added a [Chinese conference reading map](ir-conference-guide.zh-CN.md), the `coh
 Reviewed TAME as out of scope: its image generator constructs inputs for personalized VQA. PCG, RAGAR, Uni-AdGen and other incomplete checks remain in the backlog. Reading the indexed first page of the RecSys REBECA manuscript clarifies that its single-author version explicitly credits the earlier collaborative paper; full version comparison remains pending after direct institutional PDF retrieval returned 403/429.
 
 Public implementation inventories were checked for Pigeon, DiFashion, FashionDPO, DualFashion, CG4CTR and CAIG. Code was not executed; CG4CTR remains partial. No official implementation was identified for the two KDD generation papers, BGGEN or AdBooster in this pass.
+
+## 2026-09-21: literature returned from topic exploration
+
+Added DRC (ACM MM 2025), PASTA (ICML 2025; resolved prior backlog) and DesignPref (verified arXiv version, supporting UI preference assessment). Total: 41 records, comprising 38 papers and 3 standalone resources. Verified paper methods and metadata; DRC implementation files were identified but not executed. Unpublished research proposals remain outside this public repository.

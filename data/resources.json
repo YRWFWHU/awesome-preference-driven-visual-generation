@@ -3578,6 +3578,274 @@
         "pages": "73--93",
         "source_url": "https://link.springer.com/chapter/10.1007/978-3-031-76878-1_5"
       }
+    },
+    {
+      "id": "drc",
+      "title": "DRC: Enhancing Personalized Image Generation via Disentangled Representation Composition",
+      "short_name": "DRC",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "summary": "Separates historical style and reference semantics through reconstruction, then composes them to guide personalized generation.",
+      "inclusion_reason": "Individual image histories condition generated visual content.",
+      "primary_url": "https://arxiv.org/abs/2504.17349",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2504.17349",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, author order and v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2504.17349",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked methods and evaluation protocol."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3746027.3755051",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-21",
+          "note": "ACM-deposited authors, proceedings, year and pages verified."
+        },
+        {
+          "url": "https://github.com/ZhengWwwq/DRC",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "README, model requirements and script listing checked."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Xu, Yiyan",
+        "Zheng, Wuqiang",
+        "Wang, Wenjie",
+        "Zhu, Fengbin",
+        "Hu, Xinting",
+        "Zhang, Yang",
+        "Feng, Fuli",
+        "Chua, Tat-Seng"
+      ],
+      "first_publication_date": "2025-04-24",
+      "first_publication_date_note": "Earliest verified public version: arXiv v1.",
+      "publication_year": 2025,
+      "venue": "ACM MM 2025",
+      "publication_status": "published",
+      "arxiv_id": "2504.17349",
+      "doi": "10.1145/3746027.3755051",
+      "official_code_url": "https://github.com/ZhengWwwq/DRC",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Paper-linked repository lists training and inference scripts; not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history",
+        "ratings",
+        "reference_target"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy",
+        "third_party_human"
+      ],
+      "base_models": [
+        "LaVIT-7B-v2",
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 2–3 use two-stage reconstruction/SFT and an 8:1:1 sample split. Appendix A.4 reports MTurk judgments on sticker style/semantics, not history owners. Inference sweeps semantic masks using proxy scores.",
+      "limitations": "User-disjoint generalization is unverified. Movie ratings need not express poster taste; sticker histories follow constructed user themes. Proxy-based candidate selection affects comparison budgets.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "drc2025",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 33rd ACM International Conference on Multimedia",
+        "pages": "9667--9676",
+        "source_url": "https://api.crossref.org/works/10.1145/3746027.3755051"
+      }
+    },
+    {
+      "id": "pasta",
+      "title": "Preference Adaptive and Sequential Text-to-Image Generation",
+      "short_name": "PASTA",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Learns a value-based policy to select prompt-expansion slates from sequential user choices.",
+      "inclusion_reason": "Session-specific visual feedback changes subsequent image generation.",
+      "primary_url": "https://arxiv.org/abs/2412.10419",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2412.10419",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, author order and v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2412.10419",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked methods and evaluation protocol."
+        },
+        {
+          "url": "https://proceedings.mlr.press/v267/nabati25a.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-21",
+          "note": "Official title, authors, ICML 2025 and pages verified."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Nabati, Ofir",
+        "Tennenholtz, Guy",
+        "Hsu, Chihwei",
+        "Ryu, Moonkyung",
+        "Ramachandran, Deepak",
+        "Chow, Yinlam",
+        "Li, Xiang",
+        "Boutilier, Craig"
+      ],
+      "first_publication_date": "2024-12-10",
+      "first_publication_date_note": "Earliest verified public version: arXiv v1.",
+      "publication_year": 2025,
+      "venue": "ICML 2025",
+      "publication_status": "published",
+      "arxiv_id": "2412.10419",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": "https://www.kaggle.com/datasets/googleai/pasta-data",
+      "model_url": null,
+      "code_status": "unverified",
+      "code_note": "Paper links data; complete agent implementation not verified.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "rankings",
+        "natural_language"
+      ],
+      "methods": [
+        "prompt_rewriting",
+        "user_representation",
+        "active_elicitation"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study",
+        "simulation"
+      ],
+      "base_models": [
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3–6 combine human and simulated trajectories, latent preference types and IQL. Human raters choose columns over five turns; final outputs are evaluated by raters. No per-user parameter training is described at inference.",
+      "limitations": "Session intent adaptation does not establish persistent cross-session taste. User-disjoint and prompt-disjoint evaluation remain unverified. Data access and release contents were not audited.",
+      "conflicts": [
+        "Earlier arXiv title was Personalized and Sequential Text-to-Image Generation; current title and author spellings follow PMLR."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "pasta2025",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 42nd International Conference on Machine Learning",
+        "pages": "45362--45394",
+        "source_url": "https://proceedings.mlr.press/v267/nabati25a.html"
+      }
+    },
+    {
+      "id": "designpref",
+      "title": "DesignPref: Capturing Personal Preferences in Visual Design Generation",
+      "short_name": "DesignPref",
+      "resource_type": "paper",
+      "scope": "supporting",
+      "category": "personalized-preference-model",
+      "summary": "Studies designer-specific visual judgments using UI comparisons, personalized UIClip tuning and retrieval-conditioned judges.",
+      "inclusion_reason": "Supports individual visual preference evaluation; no personalized generation-control experiment is established.",
+      "primary_url": "https://arxiv.org/abs/2511.20513",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2511.20513",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, author order and v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2511.20513",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked methods and evaluation protocol."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Peng, Yi-Hao",
+        "Bigham, Jeffrey P.",
+        "Wu, Jason"
+      ],
+      "first_publication_date": "2025-11-25",
+      "first_publication_date_note": "Earliest verified public version: arXiv v1.",
+      "publication_year": 2025,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2511.20513",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "unverified",
+      "code_note": "Implementation release not verified.",
+      "tasks": [
+        "preference_prediction",
+        "evaluation"
+      ],
+      "user_signals": [
+        "pairwise",
+        "natural_language"
+      ],
+      "methods": [
+        "adapter_fine_tuning",
+        "retrieval_in_context"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "no",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "held_out_user_ratings"
+      ],
+      "base_models": [],
+      "used_for_generation": "no",
+      "evidence_note": "Sections 3–5: 20 designers, 12,000 comparison annotations; screen-disjoint 60/20/20 splits. UIClip is tuned per designer; RAG uses that designer’s examples without parameter updates.",
+      "limitations": "UI assessment may not transfer to general image generation. Different-screen testing is not unseen-designer testing. Public data/code and workshop proceedings were not verified.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "designpref2025",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2511.20513"
+      }
     }
   ]
 }
