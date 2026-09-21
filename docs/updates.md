@@ -43,3 +43,7 @@ Added PAPA and ICG after full-method checks, bringing the catalog to 43 records:
 Updated Premier with its available official adapter/user-embedding weights and commit-pinned code evidence. Its preference offset is prompt-dependent but does not read the current latent or actual timestep; native FLUX still uses time conditioning. Released linear adaptation does not enforce convex coefficients. Assets were inspected, not executed or downloaded.
 
 Additional incomplete leads are recorded in the backlog. Generic concept customization and adaptive guidance papers were used as boundary comparisons without inflating core coverage. Private research proposals remain outside this repository.
+
+### Evidence clarification: within-user diversity
+
+Rechecked Premier Appendix A and ZIPP Section 4.2.3. Premier explicitly recognizes within-user preference diversity. ZIPP evaluates context-dependent pluralistic alignment; its distributional comparison does not establish multimodal preferences for a fixed prompt. Updated their evidence notes without adding duplicate papers. Conceptrol, StyleAR and DreamBoothDPO were screened as reference/subject/style customization comparisons, outside this pass's individual-taste additions. No new core records.

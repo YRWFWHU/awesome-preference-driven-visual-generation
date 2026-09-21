@@ -401,8 +401,8 @@
         {
           "url": "https://arxiv.org/html/2603.20725",
           "kind": "paper",
-          "checked_on": "2026-09-16",
-          "note": "Methods and experiments, including the sections named in evidence_note."
+          "checked_on": "2026-09-21",
+          "note": "Rechecked Sections 3–5 and Appendix A: prompt-dependent modulation and explicit discussion of within-user preference diversity; no same-prompt mode-collapse conclusion inferred."
         },
         {
           "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Premier_Personalized_Preference_Modulation_with_Learnable_User_Embedding_in_Text-to-Image_CVPR_2026_paper.html",
@@ -482,7 +482,7 @@
         "FLUX.1-dev"
       ],
       "used_for_generation": "yes",
-      "evidence_note": "Sections 4–5: 50 unseen test users versus 1,000 training users; experts judge histories. Dispersion acts on adapter outputs. Code uses 30 x 1024 user parameters and prompt-dependent, block-specific text modulation. The preference offset does not read the current latent or actual timestep, while native FLUX modulation remains timestep-dependent. New-user coefficients are optimized; the released linear configuration does not impose a convex combination.",
+      "evidence_note": "Sections 4–5: 50 unseen test users versus 1,000 training users; experts judge histories. Dispersion acts on adapter outputs. Code uses 30 x 1024 user parameters and prompt-dependent, block-specific text modulation. The preference offset does not read the current latent or actual timestep, while native FLUX modulation remains timestep-dependent. New-user coefficients are optimized; the released linear configuration does not impose a convex combination. Appendix A explicitly discusses diverse preferences within a single PIP user; this is not evidence that one user embedding forces a unimodal output distribution.",
       "limitations": "Expert judgments are not votes from the target users. Eight adaptation examples and twenty evaluation samples per test user do not alone certify global prompt-disjointness.",
       "conflicts": [],
       "related_ids": [],
@@ -2314,8 +2314,8 @@
         {
           "url": "https://arxiv.org/html/2606.08841",
           "kind": "paper",
-          "checked_on": "2026-09-16",
-          "note": "Full method and evaluation protocol; details in evidence_note."
+          "checked_on": "2026-09-21",
+          "note": "Rechecked Section 4.2.3: pluralistic alignment across contexts, distributional metric and method-specific comparisons; distinguished from same-prompt multimodality."
         },
         {
           "url": "https://behavior-in-the-wild.github.io/zipp.html",
@@ -2330,7 +2330,7 @@
           "note": "Title variant, matching author list and exact project link establish ECCV acceptance; proceedings not checked."
         }
       ],
-      "verified_on": "2026-09-16",
+      "verified_on": "2026-09-21",
       "authors": [
         "SI, Harini",
         "Singh, Somesh",
@@ -2400,7 +2400,7 @@
       },
       "summary": "Uses natural-language personas to rewrite prompts for frozen image generators, with graph-mined histories or survey-derived profiles.",
       "inclusion_reason": "Individual personas condition actual generation; inferred demographic taste is distinguished from directly stated visual preferences.",
-      "evidence_note": "Appendices B/G: frozen image backbones; 50 participants supply intake profiles and judge personalized outputs without per-user fitting. Offline evaluation also uses CLIP/PIGReward proxies. Strict prompt-disjointness is not established.",
+      "evidence_note": "Appendices B/G: frozen image backbones; 50 participants supply intake profiles and judge personalized outputs without per-user fitting. Offline evaluation also uses CLIP/PIGReward proxies. Strict prompt-disjointness is not established. Section 4.2.3 studies context-dependent intra-user preference diversity using distributional CMMD; it does not establish multiple distinct preference modes for a fixed prompt.",
       "limitations": "Graph persona mining requires shared training and behavioral data; zero-shot generation does not mean the whole pipeline uses no user information."
     },
     {
