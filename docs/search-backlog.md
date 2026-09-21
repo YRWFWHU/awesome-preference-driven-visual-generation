@@ -73,7 +73,7 @@ The following are incomplete discovery leads, not admitted metadata or novelty e
 | Lead | Source | Remaining checks |
 | --- | --- | --- |
 | TIMGen / Temporal Interest-Driven Multimodal Personalized Content Generation | [arXiv](https://arxiv.org/abs/2509.04330) | Abstract only; verify actual image generation, individual preference mechanism, ordered authors and evaluation protocol. |
-| MultiBO / Personalized Image Generation via Human-in-the-loop Bayesian Optimization | [Author-hosted PDF](https://rrajalaxmi.web.illinois.edu/papers/multibo.pdf) | Discovery only; verify full metadata, method, user study and official resources. |
+| MultiBO / Personalized Image Generation via Human-in-the-loop Bayesian Optimization | [Verified catalog record](../README.md#multibo) | Resolved 2026-09-21: official ICML 2026 listing, named-author arXiv paper and paper-linked code verified; GP parameter fitting details remain explicit unknowns in the record. |
 | DSPO / DSPO-LPO lead; title unresolved | [OpenReview PDF](https://openreview.net/pdf/ffaf5a65d1c1fbb39138127879e424007a9c1472.pdf) | Search extract mentions PPD-based personalization; direct access returned a verification challenge. Resolve identity and read full protocol before admission. |
 | Agentic Retoucher | [arXiv](https://arxiv.org/abs/2601.02046) | Verify whether localized editing conditions on individual taste/history rather than generic quality instructions. |
 | Creating spatial visualizations using fine-tuned interior design style models informed by user preferences | [Publisher lead](https://www.sciencedirect.com/science/article/abs/pii/S1474034624003343) | Discovery only; verify individual preference evidence, method, metadata and protocol. |

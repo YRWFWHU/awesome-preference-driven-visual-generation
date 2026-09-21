@@ -4063,6 +4063,604 @@
           "note": "Methods and evaluator identity cross-checked against proceedings."
         }
       ]
+    },
+    {
+      "id": "hrfd",
+      "title": "Bridging the Intention-Expression Gap: Aligning Multi-Dimensional Preferences via Hierarchical Relevance Feedback in Text-to-Image Diffusion",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Infers feature-level preferences from session-specific likes and dislikes and rewrites prompts through a coarse-to-fine hierarchy without model training.",
+      "inclusion_reason": "Individual feedback directly changes subsequent generated images.",
+      "primary_url": "https://arxiv.org/abs/2603.14936",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2603.14936",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/abs/2603.14936v1",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified earlier title."
+        },
+        {
+          "url": "https://arxiv.org/html/2603.14936v3",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked Sections 3-4 and Appendix G for method, participant protocol, evaluation and backbone."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Wang, Wenxi",
+        "Liu, Hongbin",
+        "Li, Mingqian",
+        "Yuan, Junyan",
+        "Zhang, Junqi"
+      ],
+      "first_publication_date": "2026-03-16",
+      "first_publication_date_note": "Earliest verified arXiv v1 date; an earlier public release is not inferred.",
+      "publication_year": 2026,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2603.14936",
+      "doi": null,
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official implementation identified in checked primary sources.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes",
+        "reference_target"
+      ],
+      "methods": [
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study",
+        "similarity_proxy",
+        "generic_reward"
+      ],
+      "base_models": [
+        "FLUX.2-Klein"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3-4: training-free per-session statistical inference. Fifteen participants each completed ten reference-target cases and ten subjective-intent sessions. Metrics include convergence rounds, CLIP/LPIPS/SSIM, aesthetic score, NASA-TLX and CSI.",
+      "limitations": "Session-specific intent discovery; held-out-user and cross-prompt preference transfer are not established. The protocol requires stable preferences and hierarchical awareness.",
+      "conflicts": [
+        "The v1 title is Relevance Feedback in Text-to-Image Diffusion: A Training-Free And Model-Agnostic Interactive Framework; current v3 (2026-05-18) uses the HRFD title recorded here."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "hrfd",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2603.14936"
+      },
+      "short_name": "HRFD"
+    },
+    {
+      "id": "instant-preference-alignment",
+      "title": "Instant Preference Alignment for Text-to-Image Diffusion Models",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Extracts preferences from a selected reference image, enriches prompts and controls diffusion using global keywords and regional attention.",
+      "inclusion_reason": "User-selected references guide generation; evaluation tests preservation of each person's reference preference.",
+      "primary_url": "https://arxiv.org/abs/2508.17718",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2508.17718",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2508.17718v1",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked Sections 3-4 and Appendix D."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1109/TVCG.2026.3726123",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-21",
+          "note": "Publisher deposit confirms matching title, authors, TVCG, 2026 and pages 1-12; month/day and volume absent."
+        },
+        {
+          "url": "https://songlin1998.github.io/",
+          "kind": "author_project",
+          "checked_on": "2026-09-21",
+          "note": "Coauthor lists IEEE TVCG 2026 without code link."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Li, Yang",
+        "Yang, Songlin",
+        "Han, Xiaoxuan",
+        "Wang, Wei",
+        "Dong, Jing",
+        "Lyu, Yueming",
+        "Xue, Ziyu"
+      ],
+      "first_publication_date": "2025-08-25",
+      "first_publication_date_note": "Earliest verified arXiv v1 date; an earlier public release is not inferred.",
+      "publication_year": 2026,
+      "venue": "IEEE Transactions on Visualization and Computer Graphics",
+      "publication_status": "published",
+      "arxiv_id": "2508.17718",
+      "doi": "10.1109/TVCG.2026.3726123",
+      "official_code_url": null,
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "not_found",
+      "code_note": "No official method repository identified in the paper or coauthor publication entry; the latter links only the paper.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes",
+        "natural_language",
+        "reference_target"
+      ],
+      "methods": [
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "real",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study",
+        "third_party_human",
+        "llm_judge",
+        "similarity_proxy",
+        "generic_reward"
+      ],
+      "base_models": [
+        "Stable Diffusion XL",
+        "Stable Diffusion 2.1",
+        "Stable Cascade",
+        "Stable Diffusion 3 Large",
+        "FLUX.1-dev"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 4.1-4.5: training-free; SDXL is the main backbone. Human tests separately assess reference fidelity and preservation of the evaluator's own reference choice; GPT-4o also judges outputs. Appendix D demonstrates additional backbones and interactive refinement.",
+      "limitations": "Reference-conditioned transfer is narrower than persistent taste learning. Human sample size and held-out-user/prompt protocols were not verified. Technical evidence is from the arXiv version.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "instantpreferencealignment",
+        "entry_type": "article",
+        "container": "IEEE Transactions on Visualization and Computer Graphics",
+        "pages": "1-12",
+        "source_url": "https://api.crossref.org/works/10.1109/TVCG.2026.3726123"
+      }
+    },
+    {
+      "id": "appo",
+      "title": "Preference-Guided Prompt Optimization for Text-to-Image Generation",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Uses binary image selections to adapt prompt search through retention, evolutionary expansion and preference-based textual refinement.",
+      "inclusion_reason": "Individual selections directly steer an iterative generation session.",
+      "primary_url": "https://doi.org/10.1145/3772318.3791443",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2602.13131",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://static.siplab.org/papers/chi2026-preference_prompt_optimization.pdf",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked Section 5 and Appendix A."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145/3772318.3791443",
+          "kind": "publisher_metadata",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, ordered authors, CHI proceedings, publication 2026-04-13 and pages 1-29."
+        },
+        {
+          "url": "https://siplab.org/projects/Preference-Guided_Prompt_Optimization",
+          "kind": "author_project",
+          "checked_on": "2026-09-21",
+          "note": "Verified workflow and official code link."
+        },
+        {
+          "url": "https://github.com/ZhipengLi-98/APPO",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "Public cleaned image user-study app release."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Li, Zhipeng",
+        "Liao, Yi-Chi",
+        "Holz, Christian"
+      ],
+      "first_publication_date": "2026-02-13",
+      "first_publication_date_note": "Earliest verified arXiv v1 date; an earlier public release is not inferred.",
+      "publication_year": 2026,
+      "venue": "CHI 2026",
+      "publication_status": "published",
+      "arxiv_id": "2602.13131",
+      "doi": "10.1145/3772318.3791443",
+      "official_code_url": "https://github.com/ZhipengLi-98/APPO",
+      "project_url": "https://siplab.org/projects/Preference-Guided_Prompt_Optimization",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "partial",
+      "code_note": "Author-linked repository releases the runnable image user-study app; full baseline and synthetic-experiment reproduction components were not identified. Not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes",
+        "reference_target"
+      ],
+      "methods": [
+        "prompt_rewriting"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "target_user_study",
+        "simulation",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Section 5: sixteen participants perform open-ended intent and close-ended target tasks, with nine candidates per iteration; Gemini 2.5 Flash updates prompts. Appendix A uses CLIP-based simulated selections. Prompt search does not optimize per-user model parameters.",
+      "limitations": "Session goals rather than persistent preference transfer; users report reduced expressiveness despite lower effort. Held-out-user and cross-prompt transfer are not established.",
+      "conflicts": [
+        "Project-page title omits Text-to-Image, which appears in the paper, arXiv and publisher metadata."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "appo",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems",
+        "pages": "1-29",
+        "source_url": "https://api.crossref.org/works/10.1145/3772318.3791443"
+      },
+      "short_name": "APPO"
+    },
+    {
+      "id": "imagegem",
+      "title": "ImageGem: In-the-wild Generative Image Interaction Dataset for Generative Model Personalization",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "history-conditioned-generation",
+      "summary": "Collects user-generated image and LoRA histories and demonstrates personalized editing directions in a shared LoRA weight space.",
+      "inclusion_reason": "Beyond retrieval and pooled alignment, individual histories guide actual SDXL generation through personalized LoRA edits.",
+      "primary_url": "https://arxiv.org/abs/2510.18433",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2510.18433",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified arXiv v1 date and recorded author-spelling conflict."
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Guo_ImageGem_In-the-wild_Generative_Image_Interaction_Dataset_for_Generative_Model_Personalization_ICCV_2025_paper.html",
+          "kind": "proceedings",
+          "checked_on": "2026-09-21",
+          "note": "Official CVF metadata and BibTeX verified via direct HTTP; ordered authors, October 2025 and pages 19577-19586."
+        },
+        {
+          "url": "https://arxiv.org/html/2510.18433v1",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked Sections 3-5 and Appendix C; separate personalized W2W from pooled DPO."
+        },
+        {
+          "url": "https://maps-research.github.io/imagegem-iccv2025/",
+          "kind": "author_project",
+          "checked_on": "2026-09-21",
+          "note": "Verified dataset overview, SDXL illustration and spelling conflict."
+        },
+        {
+          "url": "https://github.com/MAPS-research/imagegem",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "Checked files and incomplete-release TODOs."
+        },
+        {
+          "url": "https://huggingface.co/datasets/MAPS-research/ImageGem-images",
+          "kind": "dataset_card",
+          "checked_on": "2026-09-21",
+          "note": "Metadata dataset is gated; no access conditions accepted."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Guo, Yuanhe",
+        "Xie, Linxi",
+        "Chen, Zhuoran",
+        "Yu, Kangrui",
+        "Po, Ryan",
+        "Yang, Guandao",
+        "Wetzstein, Gordon",
+        "Wen, Hongyi"
+      ],
+      "first_publication_date": "2025-10",
+      "first_publication_date_note": "CVF proceedings establish October 2025; arXiv v1 is 2025-10-21. Exact earliest public day remains unverified.",
+      "publication_year": 2025,
+      "venue": "ICCV 2025",
+      "publication_status": "published",
+      "arxiv_id": "2510.18433",
+      "doi": null,
+      "official_code_url": "https://github.com/MAPS-research/imagegem",
+      "project_url": "https://maps-research.github.io/imagegem-iccv2025/",
+      "data_url": "https://huggingface.co/datasets/MAPS-research/ImageGem-images",
+      "model_url": null,
+      "code_status": "partial",
+      "code_note": "Repository provides metadata links and example usage; compressed weights and W2W construction code remain TODOs. Dataset files require agreement/contact sharing.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "implicit_history"
+      ],
+      "methods": [
+        "user_representation",
+        "adapter_fine_tuning"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "yes",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "similarity_proxy",
+        "llm_judge",
+        "generic_reward"
+      ],
+      "base_models": [
+        "Stable Diffusion XL",
+        "Stable Diffusion 1.5"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 4.3/5.3: shared PCA space, per-user linear classifier and LoRA traversal; SDXL personalization uses CLIP/VLM-derived labels from real histories. SD1.5 belongs only to separate pooled DiffusionDPO with HPSv2 pairs. Generation is judged by CLIP/VLM, not target users.",
+      "limitations": "Human-figure demonstrations and proxy labels; held-out-user/prompt transfer is unverified. Adapter fine-tuning tag denotes weight adaptation here, not diffusion-gradient training. Pooled OOD-prompt results do not establish personalized transfer.",
+      "conflicts": [
+        "ArXiv metadata and project BibTeX misspell Wetzstein as Wetztein; CVF bibliographic metadata and project author list support Wetzstein.",
+        "Main Section 5.3.2 reports three users; Appendix C.5 says four."
+      ],
+      "related_ids": [],
+      "dataset_details": {
+        "name": "ImageGem",
+        "user_identity": "Civitai uploader identities link generated images and LoRA usage.",
+        "feedback": "Creation/usage histories; anonymous emoji counts do not identify individual reactors.",
+        "size_note": "Paper Table 1: raw 57,245 users; filtered 4,916,134 images, 2,895,364 prompts and 242,118 LoRA checkpoints.",
+        "evaluation_note": "Retrieval and generation are separate; personalized generation uses proxy judgments.",
+        "origin": "real"
+      },
+      "bibtex": {
+        "key": "imagegem",
+        "entry_type": "inproceedings",
+        "container": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+        "pages": "19577-19586",
+        "source_url": "https://openaccess.thecvf.com/content/ICCV2025/html/Guo_ImageGem_In-the-wild_Generative_Image_Interaction_Dataset_for_Generative_Model_Personalization_ICCV_2025_paper.html"
+      },
+      "short_name": "ImageGem"
+    },
+    {
+      "id": "fabric",
+      "title": "FABRIC: Personalizing Diffusion Models with Iterative Feedback",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Injects liked and disliked reference-image features into diffusion self-attention across feedback rounds without model training.",
+      "inclusion_reason": "Session-specific positive and negative images directly condition generation; quantitative evidence uses simulated feedback.",
+      "primary_url": "https://arxiv.org/abs/2307.10159",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2307.10159",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://sd-fabric.github.io/static/pdf/2307.10159.pdf",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked author-hosted paper Sections 3-5 and Table 1."
+        },
+        {
+          "url": "https://github.com/sd-fabric/fabric",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "Verified paper provenance, implementation and evaluation commands."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "von Rütte, Dimitri",
+        "Fedele, Elisabetta",
+        "Thomm, Jonathan",
+        "Wolf, Lukas"
+      ],
+      "first_publication_date": "2023-07-19",
+      "first_publication_date_note": "Earliest verified arXiv v1 date; an earlier public release is not inferred.",
+      "publication_year": 2023,
+      "venue": null,
+      "publication_status": "preprint",
+      "arxiv_id": "2307.10159",
+      "doi": null,
+      "official_code_url": "https://github.com/sd-fabric/fabric",
+      "project_url": "https://sd-fabric.github.io/",
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Paper-linked repository includes generation, iterative feedback and both evaluation scripts; inspected, not executed.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "likes_dislikes",
+        "reference_target"
+      ],
+      "methods": [
+        "retrieval_in_context"
+      ],
+      "user_data_origin": "synthetic",
+      "new_user_optimization": "no",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "simulation",
+        "generic_reward",
+        "similarity_proxy"
+      ],
+      "base_models": [
+        "Stable Diffusion 1.5",
+        "Dreamlike Photoreal 2.0 (Stable Diffusion 1.5)",
+        "Dreamlike Photoreal 2.0 with HPS LoRA"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3-5: frozen weights, positive/negative attention context. Evaluation uses HPS-selected feedback and target-image-similarity feedback over three rounds. Pre-existing HPS LoRA is a shared optional backbone adaptation, not per-user training.",
+      "limitations": "No controlled target-user study verified. Simulated feedback and similarity improvements do not establish real-user taste alignment or cross-prompt transfer.",
+      "conflicts": [],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "fabric",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2307.10159"
+      },
+      "short_name": "FABRIC"
+    },
+    {
+      "id": "multibo",
+      "title": "Personalized Image Generation via Human-in-the-loop Bayesian Optimization",
+      "resource_type": "paper",
+      "scope": "core",
+      "category": "interactive-preference-generation",
+      "summary": "Uses multi-choice preferential Bayesian optimization to search self-attention warps that move generated images toward a user target.",
+      "inclusion_reason": "Human choices guide image generation after prompting, within a particular target-alignment session.",
+      "primary_url": "https://arxiv.org/abs/2602.02388",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2602.02388",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Verified title, ordered authors and arXiv v1 date."
+        },
+        {
+          "url": "https://arxiv.org/html/2602.02388v2",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Checked Sections 3-4, author list, code footnote, SDXL and external human-evaluation protocol."
+        },
+        {
+          "url": "https://rrajalaxmi.web.illinois.edu/papers/multibo.pdf",
+          "kind": "paper",
+          "checked_on": "2026-09-21",
+          "note": "Author-hosted PDF responds HTTP 200; full technical reading used matching arXiv v2."
+        },
+        {
+          "url": "https://icml.cc/Downloads/2026",
+          "kind": "conference_decision",
+          "checked_on": "2026-09-21",
+          "note": "Official event list includes this paper and links poster/61197; poster fetch restricted."
+        },
+        {
+          "url": "https://github.com/AnnonAnom125/annonAnomrepo",
+          "kind": "official_repository",
+          "checked_on": "2026-09-21",
+          "note": "GitHub API and README accessible; paper explicitly supplies this link. SDXL script and BOBench identified."
+        }
+      ],
+      "verified_on": "2026-09-21",
+      "authors": [
+        "Rajagopalan, Rajalaxmi",
+        "Dutta, Debottam",
+        "Wei, Yu-Lin",
+        "Roy Choudhury, Romit"
+      ],
+      "first_publication_date": "2026-02-02",
+      "first_publication_date_note": "Earliest verified arXiv v1 date; an earlier public release is not inferred.",
+      "publication_year": 2026,
+      "venue": "ICML 2026",
+      "publication_status": "accepted",
+      "arxiv_id": "2602.02388",
+      "doi": null,
+      "official_code_url": "https://github.com/AnnonAnom125/annonAnomrepo",
+      "project_url": null,
+      "data_url": null,
+      "model_url": null,
+      "code_status": "available",
+      "code_note": "Repository is directly linked from the named-author paper despite its anonymous account name; API and README confirm BOBench and an SDXL inference script. Not executed; README still says Under Review.",
+      "tasks": [
+        "generation"
+      ],
+      "user_signals": [
+        "rankings",
+        "reference_target"
+      ],
+      "methods": [
+        "active_elicitation",
+        "reward_guidance"
+      ],
+      "user_data_origin": "mixed",
+      "new_user_optimization": "unclear",
+      "evaluates_unseen_users": "unclear",
+      "evaluates_new_prompts": "unclear",
+      "evaluation": [
+        "third_party_human",
+        "simulation",
+        "similarity_proxy",
+        "generic_reward"
+      ],
+      "base_models": [
+        "Stable Diffusion XL"
+      ],
+      "used_for_generation": "yes",
+      "evidence_note": "Sections 3-4: frozen SDXL, session GP posterior fitting and inference-time attention-warp search. Human feedback drives the main loop; reward-based variants replace it. Thirty external volunteers rank target similarity; they are not established as thirty target users.",
+      "limitations": "Specific target reconstruction, not persistent taste transfer. No diffusion-weight tuning; whether GP hyperparameters are refitted per user remains unverified, hence unclear for parameter optimization. Four choices and up to fifty rounds; no verified held-out-user/prompt protocol.",
+      "conflicts": [
+        "Official ICML 2026 event listing establishes acceptance, while repository README retains Under Review. Proceedings volume/pages were not verified."
+      ],
+      "related_ids": [],
+      "dataset_details": null,
+      "bibtex": {
+        "key": "multibo",
+        "entry_type": "misc",
+        "container": null,
+        "pages": null,
+        "source_url": "https://arxiv.org/abs/2602.02388"
+      },
+      "short_name": "MultiBO"
     }
   ]
 }
